@@ -5,8 +5,37 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>settingpage</title>
-</head>
-<body>
+  <style>
+  .sidenav {
+    width: 200px;
+    position: fixed;
+    z-index: 1;
+    top: 20px;
+    left: 10px;
+    background: #043249;
+    overflow-x: hidden;
+    padding: 8px 0;
+  }
 
+  .sidenav a {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #fff;
+    display: block;
+  }
+
+  .sidenav a:hover {
+    color: orange;
+  }
+</style>
+</head>
+<body background="images/bkg_setting.png">
+  <div class="sidenav">
+    <a href="#about">&#9995;手勢設定</a>
+    <a href="#services">Services</a>
+    <a href="#clients">Clients</a>
+    <a href="#contact">Contact</a>
+  </div>
 </body>
 </html>
