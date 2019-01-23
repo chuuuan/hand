@@ -8,7 +8,6 @@
   <style>
     * {box-sizing: border-box}
     body {font-family: "Lato", sans-serif;}
-
     /* Style the tab */
     .tab {
       float: left;
@@ -49,16 +48,52 @@
       float: left;
       padding: 0px 12px;
       border: 1px solid #000000;
-      width: 70%;
+      width: 73%;
+      height: 400px;
       /* 2border-left: none; */
-      height: 300px;
+
     }
 
     h2, p{
       font-family:google Sans;
     }
+    li {
+        list-style: none;
+        color: #fff;
+        height: 0;
+        line-height: 2em;
+        margin: 0;
+        padding: 0 0.5em;
+        width: 100m;
+        border-style: solid;
+      }
 
-  </style>
+      /* li:hover{
+        background-color: #DB8023 ;
+      } */
+      li.show {
+        height: 50px;
+        margin: 8px 0;
+      }
+    select {
+        width: 175px;
+        height: 37px;
+        padding: 0 0 0 .5em;
+        color: #fff;
+        background: #258CF8;
+        border-radius: .35em;
+      }
+    option{
+        color: white;
+        background: #043249;
+        line-height: 50px;
+      }
+      option:hover{
+        background: #63A1ED;
+      }
+
+</style>
+
 </head>
 <body background="images/bkg_setting.png">
   <input type="image" src="images/btn_shop.png" id="btn_shop" style="margin-left: 70%;
@@ -73,21 +108,62 @@
   </div>
 
   <div id="London" class="tabcontent">
-    <h2 style="color:#ffffff">手勢快捷</h2>
-    <p>London is the capital city of England.</p>
+  <h2 style="color:#ffffff">手勢快捷</h2>
+    <ul id="list">
+      <li class="show" style="padding-top:3px">手勢 1
+            <select name="slct" id="slct" style="margin-left:61%;">
+                <option>選擇功能</option>
+                <option value="1">Pure CSS</option>
+                <option value="2">No JS</option>
+                <option value="3">Nice!</option>
+            </select>
+      </li>
+      <li class="show" style="padding-top: 3px">手勢 2
+        <select name="slct" id="slct" style="margin-left:61%;">
+            <option>選擇功能</option>
+            <option value="1">Pure CSS</option>
+            <option value="2">No JS</option>
+            <option value="3">Nice!</option>
+        </select>
+      </li>
+      <li class="show" style="padding-top: 3px">手勢 3
+        <select name="slct" id="slct" style="margin-left:61%;">
+            <option>選擇功能</option>
+            <option value="1">Pure CSS</option>
+            <option value="2">No JS</option>
+            <option value="3">Nice!</option>
+        </select>
+      </li>
+      <li class="show" style="padding-top: 3px">手勢 4
+        <select name="slct" id="slct" style="margin-left:61%;">
+            <option>選擇功能</option>
+            <option value="1">Pure CSS</option>
+            <option value="2">No JS</option>
+            <option value="3">Nice!</option>
+        </select>
+      </li>
+      <li class="show" style="padding-top: 3px">手勢 5
+        <select name="slct" id="slct" style="margin-left:61%;">
+            <option>選擇功能</option>
+            <option value="1">Pure CSS</option>
+            <option value="2">No JS</option>
+            <option value="3">Nice!</option>
+        </select>
+      </li>
+    </ul>
   </div>
 
   <div id="Paris" class="tabcontent">
-    <h2 style="color:#ffffff">一般設定</h2>
+  <h2 style="color:#ffffff">一般設定</h2>
     <p>Paris is the capital of France.</p>
   </div>
 
   <div id="Tokyo" class="tabcontent">
-    <h2 style="color:#ffffff">使用教學</h2>
+  <h2 style="color:#ffffff">使用教學</h2>
     <p>Tokyo is the capital of Japan.</p>
   </div>
 
-  <script>
+<script>
   function openCity(evt, cityName) {
     var i, tabcontent, tablinks;
     tabcontent = document.getElementsByClassName("tabcontent");
