@@ -1,17 +1,13 @@
+const {app, BrowserWindow} = require('electron')
 const electron = require('electron')
-// Module to control application life.
-const app = electron.app
-// Module to create native browser window.
-const BrowserWindow = electron.BrowserWindow
-
 const path = require('path')
-const url = require('url')
-
-// Keep a global reference of the window object, if you don't, the window will
-// be closed automatically when the JavaScript object is garbage collected.
-let mainWindow
+const Tray = electron.Tray
+const Menu = electron.Menu
+const iconPath = path.join(__dirname,'images/btn_slideR.png')
+let appIcon = null;
 
 function createWindow () {
+<<<<<<< HEAD
 
   // Create the browser window.
   mainWindow = new BrowserWindow({
@@ -36,29 +32,55 @@ function createWindow () {
     // in an array if your app supports multi windows, this is the time
     // when you should delete the corresponding element.
     mainWindow = null
+=======
+  window = new BrowserWindow({width: 960, height: 590})
+  window.loadFile('index.html')
+  appIcon = new Tray(iconPath)
+  appIcon.setToolTip('electron app')
+  const contextMenu = Menu.buildFromTemplate([
+    {
+      label: 'Restore app',
+      click: () => {
+        window.show()
+      }
+    },
+    {
+      label: 'Quit app',
+      click: () => {
+        window.close()
+      }
+    }
+  ])
+  appIcon.setContextMenu(contextMenu)
+  appIcon.on('click', () => {
+    window.isVisible() ? window.hide() : window.show()
+>>>>>>> 0b0757b6b5928bf9075c4c470007e3836f8cba19
   })
+  
+// var PythonShell=  require('python-shell');
+//
+// PythonShell.run('opencam.py',  function  (err, results)  {
+//  if  (err)  throw err;
+//  console.log('opencam.py finished.');
+//  console.log('results', results);
+// });
+
+   window.on('close', (event) => {
+       windows = null
+   })
+
+   window.on('minimize',function(event){
+       event.preventDefault()
+       window.hide()
+   })
 }
 
-// This method will be called when Electron has finished
-// initialization and is ready to create browser windows.
-// Some APIs can only be used after this event occurs.
 app.on('ready', createWindow)
 
-// Quit when all windows are closed.
-app.on('window-all-closed', function () {
-  // On OS X it is common for applications and their menu bar
-  // to stay active until the user quits explicitly with Cmd + Q
-
-    app.quit()
+app.on('window-all-closed', () => {
+    if (process.platform !== 'darwin') {
+      app.quit()
+    }
 })
 
-app.on('activate', function () {
-  // On OS X it's common to re-create a window in the app when the
-  // dock icon is clicked and there are no other windows open.
-  if (mainWindow === null) {
-    createWindow()
-  }
-})
-
-// In this file you can include the rest of your app's specific main process
-// code. You can also put them in separate files and require them here.
+app.on('activate', () => { window.show() })
