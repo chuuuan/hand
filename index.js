@@ -31,13 +31,13 @@ function createWindow () {
     window.isVisible() ? window.hide() : window.show()
   })
 
-  let {PythonShell} =  require('python-shell');
-
-  PythonShell.run('opencam.py',  function  (err, results)  {
-   if  (err)  throw err;
-   console.log('opencam.py finished.');
-   console.log('results', results);
-  });
+  // let {PythonShell} =  require('python-shell');
+  //
+  // PythonShell.run('opencam.py',  function  (err, results)  {
+  //  if  (err)  throw err;
+  //  console.log('opencam.py finished.');
+  //  console.log('results', results);
+  // });
 
    window.on('close', (event) => {
        windows = null
