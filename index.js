@@ -8,6 +8,55 @@ let appIcon = null;
 
 function createWindow () {
 
+<<<<<<< HEAD
+=======
+
+  // Create the browser window.
+
+
+  window = new BrowserWindow({width: 960, height: 590})
+  window.loadFile('index.html')
+  appIcon = new Tray(iconPath)
+  appIcon.setToolTip('electron app')
+  const contextMenu = Menu.buildFromTemplate([
+    {
+      label: 'Restore app',
+      click: () => {
+        window.show()
+      }
+    },
+    {
+      label: 'Quit app',
+      click: () => {
+        window.close()
+      }
+    }
+  ])
+  appIcon.setContextMenu(contextMenu)
+  appIcon.on('click', () => {
+    window.isVisible() ? window.hide() : window.show()
+  })
+
+
+   window.on('close', (event) => {
+       windows = null
+   })
+
+   window.on('minimize',function(event){
+       event.preventDefault()
+       window.hide()
+   })
+}
+
+app.on('ready', createWindow)
+
+  // Emitted when the window is closed.
+  mainWindow.on('closed', function () {
+    // Dereference the window object, usually you would store windows
+    // in an array if your app supports multi windows, this is the time
+    // when you should delete the corresponding element.
+    mainWindow = null
+>>>>>>> 7ddd1604bd74af59c1d5f430caf883ce273aa24c
   window = new BrowserWindow({width: 960, height: 590})
   window.loadFile('index.html')
   appIcon = new Tray(iconPath)
