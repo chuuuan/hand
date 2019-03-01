@@ -10,7 +10,7 @@ function createWindow () {
 
 
   // Create the browser window.
-  
+
 
   window = new BrowserWindow({width: 960, height: 590})
   window.loadFile('index.html')
@@ -43,7 +43,6 @@ function createWindow () {
 //  console.log('results', results);
 // });
 
-<<<<<<< HEAD
    window.on('close', (event) => {
        windows = null
    })
@@ -56,7 +55,6 @@ function createWindow () {
 
 app.on('ready', createWindow)
 
-=======
   // Emitted when the window is closed.
   mainWindow.on('closed', function () {
     // Dereference the window object, usually you would store windows
@@ -106,7 +104,7 @@ app.on('ready', createWindow)
 
 app.on('ready', createWindow)
 
->>>>>>> 54c4277b3ff273b8caaa8d8428c06a2642153f06
+
 app.on('window-all-closed', () => {
     if (process.platform !== 'darwin') {
       app.quit()
