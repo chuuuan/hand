@@ -3,15 +3,84 @@
     <head>
       <meta charset="UTF-8">
       <title>Hello World!</title>
+      <style>
+        .button {
+          border-radius: 2px;
+          background-color:#F50057;
+          border: none;
+          color: #FFFFFF;
+          text-align: center;
+          font-size:24px;
+          height: 126px;
+          width: 212px;
+          transition: all 0.5s;
+          cursor: pointer;
+          margin: 5px;
+          box-shadow: 0 5px #999;
+        }
+
+        .button span {
+          cursor: pointer;
+          display: inline-block;
+          position: relative;
+          transition: 0.4s;
+        }
+
+        .button span:after {
+          content: '\00bb';
+          position: absolute;
+          opacity: 50;
+          top: 0;
+          right: -20px;
+          transition: 0.5s;
+        }
+
+        .button:hover span {
+          padding-right: 25px;
+        }
+
+        .button:hover span:after {
+          opacity: 1;
+          right: 0;
+        }
+        .button:active {
+          box-shadow: 0 1px #666;
+          transform: translateY(14px);
+        }
+
+        .button2 {
+          height: 126px;
+          width: 165px;
+          font-size: 24px;
+          text-align: center;
+          cursor: pointer;
+          outline: none;
+          color: #fff;
+          background-color: #FF80AB;
+          border: none;
+          border-radius: 2px;
+          box-shadow: 0 5px #999;
+        }
+
+        .button2:hover {background-color: #FF4081}
+
+        .button2:active {
+          background-color: #FF4081;
+          box-shadow: 0 1px #666;
+          transform: translateY(8px);
+        }
+
+      </style>
     </head>
     <body background="images/bkg_home.png">
       <!-- <script>
         require('render.js')
       </script> -->
-    <input type="image" src="images/tex_handtracking.png" id="tex_handtracking" style=" margin-left: 12%;margin-top:15%;">
-    <a href="settingpage.html"><input type="image" src="images/btn_starttest.png" id="btn_starttest" style="margin-left:-38%;margin-bottom:-31%"></a>
-    <input type="image" src="images/btn_relaxureye.png" id="btn_relaxureye" style="margin-left:10%;margin-bottom:-31%">
-    <input type="image" src="images/btn_registration.png" id="handsymbol" style="margin-left: 75%;margin-bottom:-29.1%">
+
+
+    <button class="button" id="starttest" style="margin-left:6.6%;margin-top:41%"><span>智慧驗光 </span></button>
+    <button class="button2" id="btn_relaxureye" style="margin-left:25%">眼部放鬆</button>
+    <button class="button2" id="btn_registration" style="margin-left:3%">眼科掛號</button>
 
 
       <!-- <h1>Hello World!</h1>
