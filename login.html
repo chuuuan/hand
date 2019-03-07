@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Login</title>
+  <style>
+
+</style>
+<script src="https://www.gstatic.com/firebasejs/5.8.5/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/5.8.5/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/5.8.5/firebase-database.js"></script>
+<script src="https://www.gstatic.com/firebasejs/5.8.5/firebase-firestore.js"></script>
+<script src="https://www.gstatic.com/firebasejs/5.8.5/firebase-messaging.js"></script>
+<script src="https://www.gstatic.com/firebasejs/5.8.5/firebase-functions.js"></script>
+<script src="https://www.gstatic.com/firebasejs/5.8.5/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyB3RG9-49l74BOv0FEyLn5sHI6duZlSpwQ",
+    authDomain: "eye-detection-6fd57.firebaseapp.com",
+    databaseURL: "https://eye-detection-6fd57.firebaseio.com",
+    projectId: "eye-detection-6fd57",
+    storageBucket: "eye-detection-6fd57.appspot.com",
+    messagingSenderId: "882742229686"
+  };
+  firebase.initializeApp(config);
+</script>
+
+<script src="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.js"></script>
+   <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.css" />
+   <script type="text/javascript">
+     // FirebaseUI config.
+     var uiConfig = {
+       signInSuccessUrl: 'index.html',
+       signInOptions: [
+         // Leave the lines as is for the providers you want to offer your users.
+         firebase.auth.GoogleAuthProvider.PROVIDER_ID,
+         firebase.auth.EmailAuthProvider.PROVIDER_ID,
+       ],
+       // tosUrl and privacyPolicyUrl accept either url string or a callback
+       // function.
+       // Terms of service url/callback.
+       tosUrl: '<your-tos-url>',
+       // Privacy policy url/callback.
+       privacyPolicyUrl: function() {
+         window.location.assign('<your-privacy-policy-url>');
+       }
+     };
+
+     // Initialize the FirebaseUI Widget using Firebase.
+     var ui = new firebaseui.auth.AuthUI(firebase.auth());
+     // The start method will wait until the DOM is loaded.
+     ui.start('#firebaseui-auth-container', uiConfig);
+   </script>
+ </head>
+ <body>
+   <!-- The surrounding HTML is left untouched by FirebaseUI.
+        Your app may use that space for branding, controls and other customizations.-->
+   <h1>Welcome to My Awesome App</h1>
+   <div id="firebaseui-auth-container"></div>
+ </body>
+
+</html>

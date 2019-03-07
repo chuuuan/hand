@@ -9,7 +9,7 @@ let appIcon = null;
 function createWindow () {
 
   window = new BrowserWindow({width: 960, height: 590,resizable: false})
-  window.loadFile('index.html')
+  window.loadFile('login.html')
   appIcon = new Tray(iconPath)
   appIcon.setToolTip('electron app')
   const contextMenu = Menu.buildFromTemplate([
