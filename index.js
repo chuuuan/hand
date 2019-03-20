@@ -9,7 +9,7 @@ let appIcon = null;
 function createWindow () {
 
   window = new BrowserWindow({width: 960, height: 590,resizable: false})
-  window.loadFile('login.html')
+  window.loadFile('index.html')
   appIcon = new Tray(iconPath)
   appIcon.setToolTip('electron app')
   const contextMenu = Menu.buildFromTemplate([
@@ -31,12 +31,12 @@ function createWindow () {
     window.isVisible() ? window.hide() : window.show()
   })
 
-  // let {PythonShell} =  require('python-shell');
-  //
-  // PythonShell.run('opencam.py',  function  (err, results)  {
+//   let {PythonShell} =  require('python-shell');
+
+// PythonShell.run('opencam.py',  function  (err, results)  {
   //  if  (err)  throw err;
-  //  console.log('opencam.py finished.');
-  //  console.log('results', results);
+    //console.log('opencam.py finished.');
+    //console.log('results', results);
   // });
 
    window.on('close', (event) => {
