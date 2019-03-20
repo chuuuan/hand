@@ -1,91 +1,128 @@
 <!DOCTYPE html>
-  <html>
-    <head>
-      <meta charset="UTF-8">
-      <title>Hello World!</title>
-      <style>
-        .button {
-          border-radius: 2px;
-          background-color:#F50057;
-          border: none;
-          color: #FFFFFF;
-          text-align: center;
-          font-size:24px;
-          height: 126px;
-          width: 212px;
-          transition: all 0.5s;
-          cursor: pointer;
-          margin: 5px;
-          box-shadow: 0 5px #999;
-        }
+<html>
 
-        .button span {
-          cursor: pointer;
-          display: inline-block;
-          position: relative;
-          transition: 0.4s;
-        }
+<head>
+  <meta charset="UTF-8">
+  <title>Hello World!</title>
+  <style>
+    .button {
+      border-radius: 2px;
+      background-color: #F50057;
+      border: none;
+      color: #FFFFFF;
+      text-align: center;
+      font-size: 24px;
+      height: 126px;
+      width: 212px;
+      transition: all 0.5s;
+      cursor: pointer;
+      margin: 5px;
+      box-shadow: 0 5px #999;
+    }
 
-        .button span:after {
-          content: '\00bb';
-          position: absolute;
-          opacity: 50;
-          top: 0;
-          right: -20px;
-          transition: 0.5s;
-        }
+    .button span {
+      cursor: pointer;
+      display: inline-block;
+      position: relative;
+      transition: 0.4s;
+    }
 
-        .button:hover span {
-          padding-right: 25px;
-        }
+    .button span:after {
+      content: '\00bb';
+      position: absolute;
+      opacity: 50;
+      top: 0;
+      right: -20px;
+      transition: 0.5s;
+    }
 
-        .button:hover span:after {
-          opacity: 1;
-          right: 0;
-        }
-        .button:active {
-          box-shadow: 0 1px #666;
-          transform: translateY(14px);
-        }
+    .button:hover span {
+      padding-right: 25px;
+    }
 
-        .button2 {
-          height: 126px;
-          width: 165px;
-          font-size: 24px;
-          text-align: center;
-          cursor: pointer;
-          outline: none;
-          color: #fff;
-          background-color: #FF80AB;
-          border: none;
-          border-radius: 2px;
-          box-shadow: 0 5px #999;
-        }
+    .button:hover span:after {
+      opacity: 1;
+      right: 0;
+    }
 
-        .button2:hover {background-color: #FF4081}
+    .button:active {
+      box-shadow: 0 1px #666;
+      transform: translateY(14px);
+    }
 
-        .button2:active {
-          background-color: #FF4081;
-          box-shadow: 0 1px #666;
-          transform: translateY(8px);
-        }
+    .button2 {
+      height: 126px;
+      width: 165px;
+      font-size: 24px;
+      text-align: center;
+      cursor: pointer;
+      outline: none;
+      color: #fff;
+      background-color: #FF80AB;
+      border: none;
+      border-radius: 2px;
+      box-shadow: 0 5px #999;
+    }
 
-      </style>
-    </head>
-    <body background="images/bkg_home.png">
-      <!-- <script>
+    .button2:hover {
+      background-color: #FF4081
+    }
+
+    .button2:active {
+      background-color: #FF4081;
+      box-shadow: 0 1px #666;
+      transform: translateY(8px);
+    }
+  </style>
+</head>
+
+<body background="images/bkg_home.png">
+  <!-- <script>
         require('render.js')
       </script> -->
 
 
-    <button class="button" id="starttest" style="margin-left:6.6%;margin-top:41%"><span>智慧驗光 </span></button>
-    <button class="button2" id="btn_relaxureye" style="margin-left:25%">眼部放鬆</button>
-    <button class="button2" id="btn_registration" style="margin-left:3%">眼科掛號</button>
+  <button class="button" id="starttest" style="margin-left:6.6%;margin-top:41%"><span>智慧驗光 </span></button>
+  <button class="button2" id="btn_relaxureye" style="margin-left:25%">眼部放鬆</button>
+  <button class="button2" id="btn_registration" style="margin-left:3%">眼科掛號</button>
+  <div id="user_div" class="loggedin-div">
+    <button onclick="logout()">Logout</button>
+  </div>
 
 
-      <!-- <h1>Hello World!</h1>
+  <script src="https://www.gstatic.com/firebasejs/5.9.0/firebase.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.9.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.9.0/firebase-auth.js"></script>
+  <script>
+    // Initialize Firebase
+    var config = {
+      apiKey: "AIzaSyB3RG9-49l74BOv0FEyLn5sHI6duZlSpwQ",
+      authDomain: "eye-detection-6fd57.firebaseapp.com",
+      databaseURL: "https://eye-detection-6fd57.firebaseio.com",
+      projectId: "eye-detection-6fd57",
+      storageBucket: "eye-detection-6fd57.appspot.com",
+      messagingSenderId: "882742229686"
+    };
+    firebase.initializeApp(config);
+  </script>
+  <!-- <script src="https://www.gstatic.com/firebasejs/5.9.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.9.0/firebase-auth.js"></script> -->
+  <!-- <script src="https://www.gstatic.com/firebasejs/5.9.0/firebase-database.js"></script> -->
+  <!-- <script src="https://www.gstatic.com/firebasejs/5.9.0/firebase-firestore.js"></script> -->
+  <!-- <script src="https://www.gstatic.com/firebasejs/5.9.0/firebase-messaging.js"></script> -->
+  <!-- <script src="https://www.gstatic.com/firebasejs/5.9.0/firebase-functions.js"></script> -->
+
+
+
+  <script src="index.js"></script>
+  <script src="login.js"></script>
+
+
+
+  <!-- <h1>Hello World!</h1>
       We are using node <script>document.write(process.versions.node)</script>,
       Chrome <script>document.write(process.versions.chrome)</script>,
       and Electron <script>document.write(process.versions.electron)</script>. -->
-    </body>
-  </html>
+</body>
+
+</html>

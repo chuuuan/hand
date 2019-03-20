@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>firebase register</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <div class="centerform">
+    <form id="form">
+      <div class="form-group">
+        <input id="txtEmail" type="email" placeholder="Email">
+      </div>
+      <div class="form-group">
+        <input id="txtPassword" type="password" placeholder="password">
+      </div>
+      <div class="form-group">
+        <input id="txtBirthday" type="birthday" placeholder="生日">
+      </div>
+      <div class="form-group">
+        <input id="txtIdentity" type="identity" placeholder="身分證字號">
+      </div>
+      <div class="form-group">
+        <button type="submit" class="btn btn-action">Submit</button>
+      </div>
+
+    </form>
+  </div>
+
+  <script src="https://www.gstatic.com/firebasejs/5.9.0/firebase.js"></script>
+  <script>
+    // Initialize Firebase
+    var config = {
+      apiKey: "AIzaSyB3RG9-49l74BOv0FEyLn5sHI6duZlSpwQ",
+      authDomain: "eye-detection-6fd57.firebaseapp.com",
+      databaseURL: "https://eye-detection-6fd57.firebaseio.com",
+      projectId: "eye-detection-6fd57",
+      storageBucket: "eye-detection-6fd57.appspot.com",
+      messagingSenderId: "882742229686"
+    };
+    firebase.initializeApp(config);
+  </script>
+  <script src="register.js"></script>
+
+</body>
+
+</html>
