@@ -1,5 +1,6 @@
-const {app, BrowserWindow} = require('electron')
-const electron = require('electron')
+const electron = require('electron');
+const app = electron.app;
+const BrowserWindow = electron.BrowserWindow;
 const path = require('path')
 const Tray = electron.Tray
 const Menu = electron.Menu
