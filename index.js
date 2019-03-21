@@ -49,6 +49,11 @@ function createWindow () {
    })
 }
 
+function eye_relax(){
+    document.location.href='eyeinfor.html';
+
+}
+
 app.on('ready', createWindow)
 
 
