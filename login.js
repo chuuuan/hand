@@ -6,8 +6,36 @@ firebase.auth().onAuthStateChanged(function(user) {
     console.log('user login out', user);
   }
 
+
+
+  var user = firebase.auth().currentUser;
+  var uid;
+
+
+  if (user != null) {
+    uid = user.uid;
+
+
+
+    var docRef = db.collection("User").doc(uid);
+    docRef.get().then(function(doc) {
+      if (doc.exists) {
+        document.getElementById("textname").innerHTML = doc.data().name;
+      } else {
+        // doc.data() will be undefined in this case
+        console.log("No such document!");
+      }
+    }).catch(function(error) {
+      console.log("Error getting document:", error);
+    });
+
+  } else {
+    console.log("error();");
+  }
+
+
 });
-var user = firebase.auth().currentUser;
+
 
 
 
@@ -27,6 +55,7 @@ function login() {
 
   firebase.auth().signInWithEmailAndPassword(userEmail, userPass).then(function() {
     document.location.href='index.html';
+    document.location.href = 'index.html';
   }).catch(function(error) {
     // An error happened.
     var errorCode = error.code;
@@ -34,6 +63,10 @@ function login() {
   });
 }
 
+function register() {
+
+  window.location = 'register.html'
+}
 
 function logout() {
   firebase.auth().signOut();

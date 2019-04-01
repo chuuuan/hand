@@ -1,9 +1,9 @@
-<!DOCTYPE html>
 <html>
 <head>
   <title>Firebase Login</title>
   <!-- <link href="https://fonts.googleapis.com/css?family=Nunito:400,600,700" rel="stylesheet">
   <link rel="stylesheet" href="style.css" /> -->
+
 </head>
 
 <body>
@@ -13,6 +13,7 @@
     <input type="email" placeholder="Email..." id="email_field" />
     <input type="password" placeholder="Password..." id="password_field" />
     <button onclick="login()">Login to Account</button>
+    <button onclick="register()">register</button>
   </div>
 
 <<<<<<< HEAD
@@ -25,6 +26,10 @@
 >>>>>>> 0866f689c233e9f00f2ba029aef8f2589e73902d
 
   <script src="https://www.gstatic.com/firebasejs/5.9.0/firebase.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.9.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.9.0/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.9.1/firebase-firestore.js"></script>
   <script>
     // Initialize Firebase
     var config = {
@@ -36,6 +41,8 @@
       messagingSenderId: "882742229686"
     };
     firebase.initializeApp(config);
+    const auth=firebase.auth();
+    const db =firebase.firestore();
   </script>
   <script src="login.js"></script>
 
