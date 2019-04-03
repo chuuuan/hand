@@ -66,7 +66,7 @@ function showCalendar(month, year) {
                 let cellText = document.createTextNode(date);
                 if (date === today.getDate() && year === today.getFullYear() && month === today.getMonth()) {
                     cell.classList.add("bg-info");
-                } // color today's date
+            3    } // color today's date
                 cell.appendChild(cellText);
                 row.appendChild(cell);
                 date++;
@@ -77,17 +77,28 @@ function showCalendar(month, year) {
 
         tbl.appendChild(row); // appending each row into calendar body.
     }
-
 }
 
 
 function validateTextbox(){
 var box=document.getElementById("date");
+var box1=document.getElementById("date").value;
+console.log(box1)
 if(box.value.length<5){
+
 alert("請填寫 年/月/日");
 box.focus();
 box.style.border="solid 3px red"
 return false
 }
-
+document.getElementById("date2").value=box1;
 }
+
+
+document.getElementById('theForm').addEventListener('submit', e => {
+  e.preventDefault
+
+const trashDay = document.getElementById("date").value
+  console.log(trashDay)
+  localStorage.setItem('date', trashDay)
+})

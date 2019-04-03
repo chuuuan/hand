@@ -3,12 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <title>Calendar</title>
-
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css"
           integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
-
 </head>
 <body>
 <div class="container col-sm-4 col-md-7 col-lg-4 mt-5">
@@ -60,7 +58,7 @@
                 <option value=4>May</option>
                 <option value=5>Jun</option>
                 <option value=6>Jul</option>
-                <option value=7>Aug</option>
+                <option value=7>Aug</option
                 <option value=8>Sep</option>
                 <option value=9>Oct</option>
                 <option value=10>Nov</option>
@@ -111,16 +109,15 @@
             <option value=2029>2029</option>
             <option value=2030>2030</option>
         </select></form>
-        </br>
-        <h2>填選日期</h2>
-        <form action="medicalrecord.htm" method="post" id="theForm" onSubmit="return validateTextbox()">
-          <label for="date">date:</label>
-          <input type="text" id="date" name="" value="">
-          <input type="submit" value="Submit">
-        </form>
-
     </div>
 </div>
+
+       <h2>填選日期</h2>
+       <form  action="medicalrecord.html" method="post" id="theForm" onSubmit='' >
+         <label for="date">date:</label>
+         <input type="text" id="date" onclick="this.value=''" name="" value="" placeholder="2018/12/12">
+         <input type="submit" value="Submit" >
+       </form>
 <!--<button name="jump" onclick="jump()">Go</button>-->
 <script src="calendar.js"></script>
 
