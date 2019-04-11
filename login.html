@@ -1,13 +1,97 @@
 <html>
 <head>
-  <title>Firebase Login</title>
+  <title>Login</title>
   <!-- <link href="https://fonts.googleapis.com/css?family=Nunito:400,600,700" rel="stylesheet">
   <link rel="stylesheet" href="style.css" /> -->
+<<<<<<< HEAD
 
+=======
+  <style>
+
+  /* Full-width input fields */
+  input[type=email], input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+  }
+
+  /* Set a style for all buttons */
+  button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+  }
+
+  button:hover {
+    opacity: 0.8;
+  }
+
+
+  /* Center the image and position the close button */
+  .imgcontainer {
+    text-align: center;
+    margin: 24px 0 12px 0;
+    position: relative;
+  }
+
+  img.avatar {
+    width: 40%;
+    border-radius: 50%;
+  }
+
+  .container {
+    padding: 25px;
+  }
+
+  span.psw {
+    float: right;
+    padding-top: 16px;
+  }
+
+
+
+  /* Modal Content/Box */
+  .modal-content {
+    background-color: #fefefe;
+    margin: 5% auto 30% auto; /* 5% from the top, 15% from the bottom and centered */
+    border: 1px solid #888;
+    width: 50%; /* Could be more or less, depending on screen size */
+  }
+
+
+  /* Add Zoom Animation */
+  .animate {
+    -webkit-animation: animatezoom 0.6s;
+    animation: animatezoom 0.6s
+  }
+
+  @-webkit-keyframes animatezoom {
+    from {-webkit-transform: scale(0)}
+    to {-webkit-transform: scale(1)}
+  }
+
+  @keyframes animatezoom {
+    from {transform: scale(0)}
+    to {transform: scale(1)}
+  }
+
+  span{float:right}
+
+
+  </style>
+>>>>>>> 91f3439235c659ad1ed4513dbae2137723fda6ee
 </head>
 
-<body>
+<body background="images/bkg_test.png">
 
+<<<<<<< HEAD
   <div id="login_div" class="main-div">
     <h3>Firebase Web login Example</h3>
     <input type="email" placeholder="Email..." id="email_field" />
@@ -16,6 +100,28 @@
     <button onclick="register()">register</button>
   </div>
 
+=======
+  <div id="login_div" class="main-div container modal-content animate">
+
+
+  <label for="uname"><b>帳號</b></label>
+  <input type="email" placeholder="Email" id="email_field" required />
+  <label for="psw"><b>密碼</b></label>
+  <input type="password" placeholder="Password" id="password_field" required/>
+  <button onclick="login()">Login</button>
+  <label>
+        <input type="checkbox" checked="checked" name="remember">記住我
+  </label>
+  <div class="container" style="background-color:#f1f1f1">
+      <span>點我 <a href="register.html">註冊帳號！</a></span>
+  </div>
+</div>
+
+
+
+
+
+>>>>>>> 91f3439235c659ad1ed4513dbae2137723fda6ee
   <script src="https://www.gstatic.com/firebasejs/5.9.0/firebase.js"></script>
   <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
   <script src="https://www.gstatic.com/firebasejs/5.9.0/firebase-app.js"></script>
@@ -37,6 +143,11 @@
   </script>
   <script src="login.js"></script>
 
+
+  <!-- The surrounding HTML is left untouched by FirebaseUI.
+       Your app may use that space for branding, controls and other customizations.-->
+  <div id="firebaseui-auth-container"></div>
+
 </body>
 =======
      // Initialize the FirebaseUI Widget using Firebase.
@@ -51,6 +162,8 @@
    <div id="firebaseui-auth-container"></div>
  </body>
 >>>>>>> 9c8de03a95c8d5d2e2323548b983ff7d2b70cf28
+
+
 
 
 </html>
