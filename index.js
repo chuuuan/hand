@@ -1,15 +1,27 @@
-const {app, BrowserWindow} = require('electron')
-const electron = require('electron')
+const electron = require('electron');
+const app = electron.app;
+const BrowserWindow = electron.BrowserWindow;
 const path = require('path')
 const Tray = electron.Tray
 const Menu = electron.Menu
 const iconPath = path.join(__dirname,'images/btn_slideR.png')
 let appIcon = null;
 
+// var user = auth.currentUser;
+// var name, email, photoUrl, uid, emailVerified;
+//
+// if (user != null) {
+//   name = user.displayName;
+//   email = user.email;
+//   uid = user.uid;}
+//
+// var docRef = db.collection("User").doc("uid");
+
+
 function createWindow () {
 
   window = new BrowserWindow({width: 960, height: 590,resizable: false})
-  window.loadFile('login.html')
+  window.loadFile('index.html')
   appIcon = new Tray(iconPath)
   appIcon.setToolTip('electron app')
   const contextMenu = Menu.buildFromTemplate([
@@ -31,12 +43,12 @@ function createWindow () {
     window.isVisible() ? window.hide() : window.show()
   })
 
-  // let {PythonShell} =  require('python-shell');
-  //
-  // PythonShell.run('opencam.py',  function  (err, results)  {
+//   let {PythonShell} =  require('python-shell');
+
+// PythonShell.run('opencam.py',  function  (err, results)  {
   //  if  (err)  throw err;
-  //  console.log('opencam.py finished.');
-  //  console.log('results', results);
+    //console.log('opencam.py finished.');
+    //console.log('results', results);
   // });
 
    window.on('close', (event) => {
@@ -49,13 +61,25 @@ function createWindow () {
    })
 }
 
+function eye_relax(){
+    document.location.href='eyeinfor.html';
+
+}
+
 app.on('ready', createWindow)
 
+// app.on('ready', createWindow)
 
 app.on('window-all-closed', () => {
     if (process.platform !== 'darwin') {
       app.quit()
     }
 })
+// 
+// app.on('window-all-closed', () => {
+//     if (process.platform !== 'darwin') {
+//       app.quit()
+//     }
+// })
 
 app.on('activate', () => { window.show() })

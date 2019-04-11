@@ -1,9 +1,9 @@
-<!DOCTYPE html>
 <html>
 <head>
   <title>Firebase Login</title>
   <!-- <link href="https://fonts.googleapis.com/css?family=Nunito:400,600,700" rel="stylesheet">
   <link rel="stylesheet" href="style.css" /> -->
+
 </head>
 
 <body>
@@ -13,15 +13,14 @@
     <input type="email" placeholder="Email..." id="email_field" />
     <input type="password" placeholder="Password..." id="password_field" />
     <button onclick="login()">Login to Account</button>
+    <button onclick="register()">register</button>
   </div>
 
-
-
-
-
-
-
   <script src="https://www.gstatic.com/firebasejs/5.9.0/firebase.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.9.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.9.0/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.9.1/firebase-firestore.js"></script>
   <script>
     // Initialize Firebase
     var config = {
@@ -33,9 +32,25 @@
       messagingSenderId: "882742229686"
     };
     firebase.initializeApp(config);
+    const auth=firebase.auth();
+    const db =firebase.firestore();
   </script>
   <script src="login.js"></script>
 
 </body>
+=======
+     // Initialize the FirebaseUI Widget using Firebase.
+     var ui = new firebaseui.auth.AuthUI(firebase.auth());
+     // The start method will wait until the DOM is loaded.
+     ui.start('#firebaseui-auth-container', uiConfig);
+   </script>
+ </head>
+ <body>
+   <!-- The surrounding HTML is left untouched by FirebaseUI.
+        Your app may use that space for branding, controls and other customizations.-->
+   <div id="firebaseui-auth-container"></div>
+ </body>
+>>>>>>> 9c8de03a95c8d5d2e2323548b983ff7d2b70cf28
+
 
 </html>

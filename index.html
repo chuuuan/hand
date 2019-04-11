@@ -4,7 +4,22 @@
 <head>
   <meta charset="UTF-8">
   <title>Hello World!</title>
+  <script type="text/javascript" src="index.js"></script>
   <style>
+<<<<<<< HEAD
+    .div {
+      height: 126px;
+      width: 165px;
+      position: absolute;
+      top: 50px;
+      left: 100px;
+    }
+
+=======
+    .div{
+
+    }
+>>>>>>> a19bba67c051f4a903e19ef4080ddda66753efaa
     .button {
       border-radius: 2px;
       background-color: #F50057;
@@ -74,17 +89,21 @@
       transform: translateY(8px);
     }
   </style>
+
 </head>
 
 <body background="images/bkg_home.png">
-  <!-- <script>
-        require('render.js')
-      </script> -->
+
+  <div class="div">
+    <h1  id="textname"></h1>
+
+  </div>
 
 
-  <button class="button" id="starttest" style="margin-left:6.6%;margin-top:41%"><span>智慧驗光 </span></button>
-  <button class="button2" id="btn_relaxureye" style="margin-left:25%">眼部放鬆</button>
-  <button class="button2" id="btn_registration" style="margin-left:3%">眼科掛號</button>
+
+  <a href="eyetest.html"><button class="button" id="starttest" style="margin-left:6.6%;margin-top:41%"><span>智慧驗光 </span></button></a>
+  <a href="eyeinfor.html"><button class="button2" id="btn_relaxureye" style="margin-left:25%">眼部放鬆</button></a>
+  <a href="registered.html"><button class="button2" id="btn_registration" style="margin-left:3%">眼科掛號</button></a>
   <div id="user_div" class="loggedin-div">
     <button onclick="logout()">Logout</button>
   </div>
@@ -93,6 +112,7 @@
   <script src="https://www.gstatic.com/firebasejs/5.9.0/firebase.js"></script>
   <script src="https://www.gstatic.com/firebasejs/5.9.0/firebase-app.js"></script>
   <script src="https://www.gstatic.com/firebasejs/5.9.0/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.9.1/firebase-firestore.js"></script>
   <script>
     // Initialize Firebase
     var config = {
@@ -104,25 +124,19 @@
       messagingSenderId: "882742229686"
     };
     firebase.initializeApp(config);
+    const auth=firebase.auth();
+    const db =firebase.firestore();
   </script>
-  <!-- <script src="https://www.gstatic.com/firebasejs/5.9.0/firebase-app.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/5.9.0/firebase-auth.js"></script> -->
-  <!-- <script src="https://www.gstatic.com/firebasejs/5.9.0/firebase-database.js"></script> -->
-  <!-- <script src="https://www.gstatic.com/firebasejs/5.9.0/firebase-firestore.js"></script> -->
-  <!-- <script src="https://www.gstatic.com/firebasejs/5.9.0/firebase-messaging.js"></script> -->
-  <!-- <script src="https://www.gstatic.com/firebasejs/5.9.0/firebase-functions.js"></script> -->
 
 
 
-  <script src="index.js"></script>
+
+
+
+
+
   <script src="login.js"></script>
 
 
-
-  <!-- <h1>Hello World!</h1>
-      We are using node <script>document.write(process.versions.node)</script>,
-      Chrome <script>document.write(process.versions.chrome)</script>,
-      and Electron <script>document.write(process.versions.electron)</script>. -->
 </body>
-
 </html>
