@@ -16,7 +16,6 @@ firebase.auth().onAuthStateChanged(function(user) {
     uid = user.uid;
 
 
-<<<<<<< HEAD
     db.collection("User").doc(uid)
     .onSnapshot(function(doc) {
         console.log("Current data: ", doc.data());
@@ -39,20 +38,6 @@ firebase.auth().onAuthStateChanged(function(user) {
     //   console.log("Error getting document:", error);
 
      });
-=======
-
-    var docRef = db.collection("User").doc(uid);
-    docRef.get().then(function(doc) {
-      if (doc.exists) {
-        document.getElementById("textname").innerHTML = doc.data().name;
-      } else {
-        // doc.data() will be undefined in this case
-        console.log("No such document!");
-      }
-    }).catch(function(error) {
-      console.log("Error getting document:", error);
-    });
->>>>>>> 91f3439235c659ad1ed4513dbae2137723fda6ee
 
   } else {
     console.log("error();");
