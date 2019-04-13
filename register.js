@@ -1,5 +1,6 @@
 document.getElementById('form').addEventListener('submit', submitForm);
 var db = firebase.firestore();
+var uid;
 
 
 function submitForm(e) {
@@ -10,20 +11,24 @@ function submitForm(e) {
   const passwordField = getid('txtPassword');
   const birthday = getid('txtBirthday');
   const identity = getid('txtIdentity');
+  const name = getid('txtName');
+
   // const signUpBtn = getid('btnSignup')
 
 
 
 
-  // Save message
-  saveMessage(emailField, birthday, identity);
+
 
 
   var auth = firebase.auth();
 
-  const promise = auth.createUserWithEmailAndPassword(emailField, passwordField).then(function(user) {
-     document.location.href = 'login.html';
-    
+  const promise = auth.createUserWithEmailAndPassword(emailField, passwordField).then(cred => {
+    uid = cred.user.uid;
+    console.log("uid", cred.user.uid);
+    saveMessage(emailField, birthday, identity, name, uid);
+    document.location.href = 'login.html';
+
 
   }).catch(function(error) {
     var errorCode = error.code;
@@ -31,12 +36,16 @@ function submitForm(e) {
 
   })
 
+  // Save message
+  saveMessage(emailField, birthday, identity, name, uid);
+
 }
 
 
-function saveMessage(emailField, birthday, identity) {
+function saveMessage(emailField, birthday, identity, name) {
   // Add a new document in collection "cities"
-  db.collection("User").doc(identity).set({
+  db.collection("User").doc(uid).set({
+      name: name,
       email: emailField,
       birthday: birthday,
       identity: identity

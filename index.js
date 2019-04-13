@@ -7,6 +7,17 @@ const Menu = electron.Menu
 const iconPath = path.join(__dirname,'images/btn_slideR.png')
 let appIcon = null;
 
+// var user = auth.currentUser;
+// var name, email, photoUrl, uid, emailVerified;
+//
+// if (user != null) {
+//   name = user.displayName;
+//   email = user.email;
+//   uid = user.uid;}
+//
+// var docRef = db.collection("User").doc("uid");
+
+
 function createWindow () {
 
   window = new BrowserWindow({width: 960, height: 590,resizable: false})
@@ -57,11 +68,18 @@ function eye_relax(){
 
 app.on('ready', createWindow)
 
+// app.on('ready', createWindow)
 
 app.on('window-all-closed', () => {
     if (process.platform !== 'darwin') {
       app.quit()
     }
 })
+// 
+// app.on('window-all-closed', () => {
+//     if (process.platform !== 'darwin') {
+//       app.quit()
+//     }
+// })
 
 app.on('activate', () => { window.show() })

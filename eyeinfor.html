@@ -5,14 +5,17 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>settingpage</title>
+  <title>eyeinfor</title>
   <style>
     /* card button show */
 
     .container {
       position: relative;
-      width: 50%;
+      width: 60%;
+      height: auto;
       display: inline-block;
+
+
     }
 
     .middle {
@@ -22,12 +25,12 @@
       top: 60%;
       left: 19.5%;
       transform: translate(-50%, -50%);
-      -ms-transform: translate(-50%, -50%);
+      -ms-transform: translate(-20%, -20%);
       text-align: center;
     }
 
     .container:hover .image {
-      opacity: 0.3;
+      opacity: 0.5;
     }
 
     .container:hover .middle {
@@ -35,9 +38,9 @@
     }
 
     .checkmore {
-      background-color: #4CAF50;
+      background-color: #E4D154;
       border: none;
-      color: white;
+      color: #666560;
       font-size: 16px;
       padding: 16px 32px;
       cursor: pointer;
@@ -46,26 +49,24 @@
     /* scrollbars */
     .myBox {
       border: none;
-      padding: 5px;
-      font: 24px sans-serif;
-      width: 200px;
-      height: 200px;
+      padding: 2px;
+      font: 0px sans-serif;
       overflow: scroll;
     }
 
     /* Scrollbar styles */
     ::-webkit-scrollbar {
-      width: 12px;
-      height: 12px;
+      width: 1px;
+      height: 15px;
     }
 
     ::-webkit-scrollbar-track {
-      border: 1px solid yellowgreen;
+      border: 0.5px solid #E4D154;
       border-radius: 10px;
     }
 
     ::-webkit-scrollbar-thumb {
-      background: yellowgreen;
+      background: #E4D154;
       border-radius: 10px;
     }
 
@@ -103,8 +104,8 @@
       margin: 2% auto 15% auto;
       /* 5% from the top, 15% from the bottom and centered */
       border: 1px solid #888;
-      width: 90%;
-      height: 90%;
+      width: 91%;
+      height: auto;
       /* Could be more or less, depending on screen size */
     }
 
@@ -133,7 +134,7 @@
 
     .p{
       position: absolute;
-      top: -0.39%;
+      top: -0.58%;
       left: -0.89%;
     }
 
@@ -143,8 +144,7 @@
 
 <body background="images/eyeinfor/bkg_eyeinfor.png">
   <a href="index.html"><img class="p" style="cursor:pointer" src="images/btn_backtohome.png"></a>
-
-  <div style="border:1px;height:100%;width:100%;margin-top:17% ;overflow-x:scroll;overflow-y:hidden;white-space:nowrap;">
+  <div style="margin-top:15% ;overflow-x:scroll;overflow-y:hidden;white-space:nowrap;">
 
     <div class="container">
       <img src="images/eyeinfor/用眼藥的守則.png" class="image" style="width:35%">
@@ -175,7 +175,7 @@
     </div>
 
 
-    <div class="container" style="margin-left:-30%">
+    <div class="container" style="margin-left:-40%">
       <img src="images/eyeinfor/熱敷使用法.png" class="image" style="width:35%">
       <div class="middle">
         <button class="checkmore" onclick="document.getElementById('id02').style.display='block'">查看更多</button>
@@ -204,7 +204,7 @@
 
 
 
-    <div class="container" style="margin-left:-30%">
+    <div class="container" style="margin-left:-40%">
       <img src="images/eyeinfor/白內障.png" class="image" style="width:35%">
       <div class="middle">
         <button class="checkmore" onclick="document.getElementById('id03').style.display='block'">查看更多</button>
@@ -250,7 +250,7 @@
         </div>
       </form>
     </div>
-    <div class="container" style="margin-left:-30%">
+    <div class="container" style="margin-left:-40%">
       <img src="images/eyeinfor/老年性黃斑病變.png" class="image" style="width:35%">
       <div class="middle">
         <button class="checkmore" onclick="document.getElementById('id04').style.display='block'">查看更多</button>
@@ -286,7 +286,7 @@
         </div>
       </form>
     </div>
-    <div class="container" style="margin-left:-30%">
+    <div class="container" style="margin-left:-40%">
       <img src="images/eyeinfor/屈光不正.png" class="image" style="width:35%">
       <div class="middle">
         <button class="checkmore" onclick="document.getElementById('id05').style.display='block'">查看更多</button>
@@ -342,7 +342,7 @@
         </div>
       </form>
     </div>
-    <div class="container" style="margin-left:-30%">
+    <div class="container" style="margin-left:-40%">
       <img src="images/eyeinfor/青光眼.png" class="image" style="width:35%">
       <div class="middle">
         <button class="checkmore" onclick="document.getElementById('id06').style.display='block'">查看更多</button>
@@ -396,7 +396,7 @@
         </div>
       </form>
     </div>
-    <div class="container" style="margin-left:-30%">
+    <div class="container" style="margin-left:-40%">
       <img src="images/eyeinfor/紅眼症.png" class="image" style="width:35%">
       <div class="middle">
         <button class="checkmore" onclick="document.getElementById('id07').style.display='block'">查看更多</button>
@@ -437,7 +437,7 @@
         </div>
       </form>
     </div>
-    <div class="container" style="margin-left:-30%">
+    <div class="container" style="margin-left:-40%">
       <img src="images/eyeinfor/飛蚊症.png" class="image" style="width:35%">
       <div class="middle">
         <button class="checkmore" onclick="document.getElementById('id08').style.display='block'">查看更多</button>
@@ -470,7 +470,7 @@
         </div>
       </form>
     </div>
-    <div class="container" style="margin-left:-30%">
+    <div class="container" style="margin-left:-40%">
       <img src="images/eyeinfor/斜視.png" class="image" style="width:35%">
       <div class="middle">
         <button class="checkmore" onclick="document.getElementById('id09').style.display='block'">查看更多</button>
