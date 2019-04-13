@@ -82,8 +82,8 @@ function showCalendar(month, year) {
 
 function validateTextbox(){
 var box=document.getElementById("date");
-var box1=document.getElementById("date").value;
-console.log(box1)
+
+
 if(box.value.length<5){
 
 alert("請填寫 年/月/日");
@@ -91,7 +91,7 @@ box.focus();
 box.style.border="solid 3px red"
 return false
 }
-document.getElementById("date2").value=box1;
+
 }
 
 
