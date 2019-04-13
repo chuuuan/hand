@@ -16,18 +16,28 @@ firebase.auth().onAuthStateChanged(function(user) {
     uid = user.uid;
 
 
+    db.collection("User").doc(uid)
+    .onSnapshot(function(doc) {
+        console.log("Current data: ", doc.data());
+        if (doc.exists) {
+            document.getElementById("textname").innerHTML = doc.data().name;
+          } else {
+            // doc.data() will be undefined in this case
+            console.log("No such document!");
+          }
 
-    var docRef = db.collection("User").doc(uid);
-    docRef.get().then(function(doc) {
-      if (doc.exists) {
-        document.getElementById("textname").innerHTML = doc.data().name;
-      } else {
-        // doc.data() will be undefined in this case
-        console.log("No such document!");
-      }
-    }).catch(function(error) {
-      console.log("Error getting document:", error);
-    });
+    // var docRef = db.collection("User").doc(uid);
+    // docRef.get().then(function(doc) {
+    //   if (doc.exists) {
+    //     document.getElementById("textname").innerHTML = doc.data().name;
+    //   } else {
+    //     // doc.data() will be undefined in this case
+    //     console.log("No such document!");
+    //   }
+    // }).catch(function(error) {
+    //   console.log("Error getting document:", error);
+
+     });
 
   } else {
     console.log("error();");

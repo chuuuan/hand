@@ -68,11 +68,18 @@ function eye_relax(){
 
 app.on('ready', createWindow)
 
+// app.on('ready', createWindow)
 
 app.on('window-all-closed', () => {
     if (process.platform !== 'darwin') {
       app.quit()
     }
 })
+// 
+// app.on('window-all-closed', () => {
+//     if (process.platform !== 'darwin') {
+//       app.quit()
+//     }
+// })
 
 app.on('activate', () => { window.show() })

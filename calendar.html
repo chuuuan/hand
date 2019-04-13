@@ -3,27 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <title>Calendar</title>
-
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css"
           integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
-
     <style>
       .p{
         position: absolute;
         top:10px;
         left:22%;
       }
+
       .j{
         position: absolute;
-        top: 1.5%;
-        left: 41%;
+        top:1.5%;
+        left:41%
       }
 
-
     </style>
-
 </head>
 <body background="images/bkg_test.png">
 <div class="container col-sm-4 col-md-7 col-lg-4 p">
@@ -125,14 +122,16 @@
               <option value=2030>2030</option>
           </select></form>
         <h5>輸入日期:</h5>
-        <form action="medicalrecord.htm" method="post" id="theForm" onSubmit="return validateTextbox()" style="margin-left:20% ;margin-top:-33px">
+        <form action="medicalrecord.html" method="post" id="theForm" onSubmit="return validateTextbox()" style="margin-left:20% ;margin-top:-33px">
           <label for="date"></label>
-          <input type="text" id="date" name="" value="">
+          <input type="text" id="date" name="" value="" onclick=this.value placeholder="2018/12/12">
           <input type="submit" value="Submit">
         </form>
 
     </div>
 </div>
+
+
 <!--<button name="jump" onclick="jump()">Go</button>-->
 <script src="calendar.js"></script>
 

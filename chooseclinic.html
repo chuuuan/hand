@@ -6,12 +6,14 @@
     <style>
        /* Accordion */
       .accordion {
+
         background-color:#40A89B;
         color: #000000;
         cursor: pointer;
         padding: 20px;
         width: 10%;
         border: 1px solid #008975;
+
         text-align: center;
         outline: none;
         font-size: 14px;
@@ -116,6 +118,7 @@
       <div>
         <button class="accordion">台北市</button>
         <div class="btn-group panel">
+          <button onclick="document.getElementById('id01').style.display='block'">臺大醫院</button>
           <a href="calendar.html"><button>臺大醫院</button></a>
             <div id="id01" class="modal">
               <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
