@@ -79,7 +79,7 @@
 <body background="images/bkg_test.png">
   <div class="container j" style="margin:0 auto">
     <h1>註冊</h1>
-    <hr>
+    <form  id="form">
       <label for="email"><b>信箱</b></label>
       <input id="txtEmail" type="email" placeholder="輸入信箱" required>
 
@@ -96,10 +96,10 @@
       <input id="txtIdentity" type="identity" placeholder="A000000000" required>
 
 
-        <button type="submit" class="registerbtn">Submit</button>
+      <button onclick="submitForm" type="submit" class="registerbtn">Submit</button>
       <p>已經有帳號？<a href="login.html">登入</a>.</p>
 
-
+  </form>
 
   </div>
 
