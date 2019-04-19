@@ -16,13 +16,13 @@
       }
 
       label {
-        padding: 12px 12px 12px 0;
+        padding: 10px 12px 12px 40px;
         display: inline-block;
       }
 
       input[type=submit] {
-        background-color: #4CAF50;
-        color: white;
+        background-color: #E4D154;
+        color: #606060;
         padding: 12px 20px;
         border: none;
         border-radius: 4px;
@@ -31,18 +31,22 @@
       }
 
       input[type=submit]:hover {
-        background-color: #45a049;
+        background-color: #FDE01C;
       }
 
       .container {
         border-radius: 5px;
-        background-color: #f2f2f2;
+        background-color: rgba(194,229,223,0.5);
+        padding: 20px;
+      }
+      .container1 {
+        border-radius: 5px;
         padding: 20px;
       }
 
       .col-25 {
         float: left;
-        width: 25%;
+        width: 20%;
         margin-top: 5px;
       }
 
@@ -72,12 +76,19 @@
         }
       }
 
-
+      .p{
+        position: absolute;
+        top: -0.38%;
+        left: -0.99%;
+      }
 
 
 </style>
 </head>
 <body background="images/bkg_test.png">
+
+<a href="calendar.html"><img class="p" style="cursor:pointer" src="images/btn_back.png"></a>
+
 <div class="container">
   <form action="/action_page.php">
 
@@ -122,10 +133,10 @@
       <div class="col-25">
         <label for="lname">藥物使用:</label>
       </div>
-        <label class="container"  style="margin-top:1px;margin-left:-2%">
+        <label class="container1"  style="margin-top:1px;margin-left:-2%">
           <input type="checkbox" checked="checked">無
         </label>
-        <label class="container">
+        <label class="container1">
           <input type="checkbox">有:
         </label>
         <input style="width:25%;margin-left:-2%" type="text">
@@ -135,10 +146,10 @@
       <div class="col-25">
         <label for="lname">有無過敏:</label>
       </div>
-      <label class="container"  style="margin-top:1px;margin-left:-2%">
+      <label class="container1"  style="margin-top:1px;margin-left:-2%">
         <input type="checkbox" checked="checked">無
       </label>
-      <label class="container">
+      <label class="container1">
         <input type="checkbox">有:
       </label>
       <input style="width:25%;margin-left:-2%" type="text">
@@ -158,11 +169,11 @@
         <label for="subject">今天眼睛有甚麼問題:</label>
       </div>
       <div class="col-75">
-        <textarea id="subject" name="subject" placeholder="Write something.." style="height:120px"></textarea>
+        <textarea id="subject" name="subject" placeholder="Write something.." style="height:60px"></textarea>
       </div>
     </div>
     <div class="row">
-      <input type="submit" value="Submit">
+      <input type="submit" value="送出">
     </div>
   </form>
 </div>
