@@ -36,8 +36,6 @@ function submitForm(e) {
 
   })
 
-  // Save message
-  saveMessage(emailField, birthday, identity, name, uid);
 
 }
 
