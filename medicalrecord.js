@@ -6,24 +6,17 @@ var db = firebase.firestore();
 
 
 function savedata() {
-  console.log(identify2);
-  console.log(date2);
+
   const txtName = getid('fname');
-  console.log(txtName);
   const phone = getid('phonename');
-  console.log(phone);
   const medic = getid('medical');
-  console.log(medic);
   const allergic = getid('allergic');
-  console.log(allergic);
   const medbox = getid('lbox');
-  console.log(medbox);
   const txtbox = getid('subject');
-  console.log(txtbox);
 
   saveMessage(identify2, date2, txtName, allergic, phone, medic, medbox, txtbox);
 
-   document.location.href = 'index.html';
+  document.location.href = 'index.html';
 
 
 }
@@ -34,7 +27,7 @@ function saveMessage(identify2, date2, txtName, allergic, phone, medic, medbox, 
     // date: date,
     identify: identify2,
     name: txtName,
-    date:date2,
+    date: date2,
     phone: phone,
     medical: medic,
     allergic: allergic,
