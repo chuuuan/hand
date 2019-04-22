@@ -1,13 +1,13 @@
-document.getElementById('date2').value = localStorage.getItem('date') || '2019/10/01'
+const identify2 = sessionStorage.getItem('identify');
+const date2 = sessionStorage.getItem('date');
+document.getElementById('date2').value = date2;
 document.getElementById('Submit1').addEventListener('click', savedata);
 var db = firebase.firestore();
 
 
 function savedata() {
-  const date = date2;
-  console.log(date);
-  // const identify = getid('identify');
-  // console.log(identify);
+  console.log(identify2);
+  console.log(date2);
   const txtName = getid('fname');
   console.log(txtName);
   const phone = getid('phonename');
@@ -21,7 +21,7 @@ function savedata() {
   const txtbox = getid('subject');
   console.log(txtbox);
 
-  saveMessage(txtName, allergic,phone, medic, medbox, txtbox);
+  saveMessage(identify2, date2, txtName, allergic, phone, medic, medbox, txtbox);
 
   // window.location.href = 'index.html';
 
@@ -29,10 +29,12 @@ function savedata() {
 }
 
 
-function saveMessage(txtName,allergic, phone, medic, medbox, txtbox) {
-  db.collection('medic').doc(txtName).set({
+function saveMessage(identify2, date2, txtName, allergic, phone, medic, medbox, txtbox) {
+  db.collection('medic').doc(identify2).set({
     // date: date,
+    identify: identify2,
     name: txtName,
+    date:date2,
     phone: phone,
     medical: medic,
     allergic: allergic,

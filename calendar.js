@@ -100,5 +100,5 @@ document.getElementById('theForm').addEventListener('submit', e => {
 
 const trashDay = document.getElementById("date").value
   console.log(trashDay)
-  localStorage.setItem('date', trashDay)
+  sessionStorage.setItem('date', trashDay)
 })
