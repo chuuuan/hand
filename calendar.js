@@ -11,84 +11,86 @@ showCalendar(currentMonth, currentYear);
 
 
 function next() {
-  currentYear = (currentMonth === 11) ? currentYear + 1 : currentYear;
-  currentMonth = (currentMonth + 1) % 12;
-  showCalendar(currentMonth, currentYear);
+    currentYear = (currentMonth === 11) ? currentYear + 1 : currentYear;
+    currentMonth = (currentMonth + 1) % 12;
+    showCalendar(currentMonth, currentYear);
 }
 
 function previous() {
-  currentYear = (currentMonth === 0) ? currentYear - 1 : currentYear;
-  currentMonth = (currentMonth === 0) ? 11 : currentMonth - 1;
-  showCalendar(currentMonth, currentYear);
+    currentYear = (currentMonth === 0) ? currentYear - 1 : currentYear;
+    currentMonth = (currentMonth === 0) ? 11 : currentMonth - 1;
+    showCalendar(currentMonth, currentYear);
 }
 
 function jump() {
-  currentYear = parseInt(selectYear.value);
-  currentMonth = parseInt(selectMonth.value);
-  showCalendar(currentMonth, currentYear);
+    currentYear = parseInt(selectYear.value);
+    currentMonth = parseInt(selectMonth.value);
+    showCalendar(currentMonth, currentYear);
 }
 
 function showCalendar(month, year) {
 
-  let firstDay = (new Date(year, month)).getDay();
-  let daysInMonth = 32 - new Date(year, month, 32).getDate();
+    let firstDay = (new Date(year, month)).getDay();
+    let daysInMonth = 32 - new Date(year, month, 32).getDate();
 
-  let tbl = document.getElementById("calendar-body"); // body of the calendar
+    let tbl = document.getElementById("calendar-body"); // body of the calendar
 
-  // clearing all previous cells
-  tbl.innerHTML = "";
+    // clearing all previous cells
+    tbl.innerHTML = "";
 
-  // filing data about month and in the page via DOM.
-  monthAndYear.innerHTML = months[month] + " " + year;
-  selectYear.value = year;
-  selectMonth.value = month;
+    // filing data about month and in the page via DOM.
+    monthAndYear.innerHTML = months[month] + " " + year;
+    selectYear.value = year;
+    selectMonth.value = month;
 
-  // creating all cells
-  let date = 1;
-  for (let i = 0; i < 6; i++) {
-    // creates a table row
-    let row = document.createElement("tr");
+    // creating all cells
+    let date = 1;
+    for (let i = 0; i < 6; i++) {
+        // creates a table row
+        let row = document.createElement("tr");
 
-    //creating individual cells, filing them up with data.
-    for (let j = 0; j < 7; j++) {
-      if (i === 0 && j < firstDay) {
-        let cell = document.createElement("td");
-        let cellText = document.createTextNode("");
-        cell.appendChild(cellText);
-        row.appendChild(cell);
-      } else if (date > daysInMonth) {
-        break;
-      } else {
-        let cell = document.createElement("td");
-        let cellText = document.createTextNode(date);
-        if (date === today.getDate() && year === today.getFullYear() && month === today.getMonth()) {
-          cell.classList.add("bg-info");
-          3
-        } // color today's date
-        cell.appendChild(cellText);
-        row.appendChild(cell);
-        date++;
-      }
+        //creating individual cells, filing them up with data.
+        for (let j = 0; j < 7; j++) {
+            if (i === 0 && j < firstDay) {
+                let cell = document.createElement("td");
+                let cellText = document.createTextNode("");
+                cell.appendChild(cellText);
+                row.appendChild(cell);
+            }
+            else if (date > daysInMonth) {
+                break;
+            }
+
+            else {
+                let cell = document.createElement("td");
+                let cellText = document.createTextNode(date);
+                if (date === today.getDate() && year === today.getFullYear() && month === today.getMonth()) {
+                    cell.classList.add("bg-info");
+                } // color today's date
+                cell.appendChild(cellText);
+                row.appendChild(cell);
+                date++;
+            }
 
 
+        }
+
+        tbl.appendChild(row); // appending each row into calendar body.
     }
-
-    tbl.appendChild(row); // appending each row into calendar body.
-  }
 }
 
 
-function validateTextbox() {
-  var box = document.getElementById("date");
+function validateTextbox(){
+var box=document.getElementById("date");
 
 
-  if (box.value.length < 5) {
+if(box.value.length<5){
 
-    alert("請填寫 年/月/日");
-    box.focus();
-    box.style.border = "solid 3px red"
-    return false
-  }
+alert("請填寫 年/月/日");
+box.focus();
+box.style.border="solid 3px red"
+return false
+}
 
 }
 
@@ -96,6 +98,7 @@ function validateTextbox() {
 document.getElementById('theForm').addEventListener('submit', e => {
   e.preventDefault
 
-  const trashDay = document.getElementById("date").value
+const trashDay = document.getElementById("date").value
+  console.log(trashDay)
   sessionStorage.setItem('date', trashDay)
 })
