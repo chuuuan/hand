@@ -23,7 +23,7 @@ function savedata() {
 
   saveMessage(identify2, date2, txtName, allergic, phone, medic, medbox, txtbox);
 
-  // window.location.href = 'index.html';
+   document.location.href = 'index.html';
 
 
 }
