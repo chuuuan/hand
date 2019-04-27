@@ -41,7 +41,7 @@ function submitForm(e) {
 
 
 function saveMessage(emailField, birthday, identity, name) {
-  // Add a new document in collection "cities"
+  // Add a new document in collection uid
   db.collection("User").doc(uid).set({
       name: name,
       email: emailField,

@@ -10,11 +10,28 @@ firebase.auth().onAuthStateChanged(function(user) {
 
   var user = firebase.auth().currentUser;
   var uid;
+  uid = user.uid;
+
+
 
 
   if (user != null) {
-    uid = user.uid;
 
+    db.collection("temp").doc("temp_user").set({
+      uid: uid
+    });
+
+
+    db.collection("User").doc(uid).collection("eyesight").doc("eye").set({
+      blind :"0",
+      date :"0",
+      eye_flash_left :"0",
+      eye_flash_right :"0",
+      eye_left :"0",
+      eye_right :"0",
+      mostiquto :"0",
+      yellow :"0"
+    });
 
     db.collection("User").doc(uid)
     .onSnapshot(function(doc) {
@@ -25,18 +42,6 @@ firebase.auth().onAuthStateChanged(function(user) {
             // doc.data() will be undefined in this case
             console.log("No such document!");
           }
-
-    // var docRef = db.collection("User").doc(uid);
-    // docRef.get().then(function(doc) {
-    //   if (doc.exists) {
-    //     document.getElementById("textname").innerHTML = doc.data().name;
-    //   } else {
-    //     // doc.data() will be undefined in this case
-    //     console.log("No such document!");
-    //   }
-    // }).catch(function(error) {
-    //   console.log("Error getting document:", error);
-
      });
 
   } else {
@@ -65,7 +70,6 @@ function login() {
 
   firebase.auth().signInWithEmailAndPassword(userEmail, userPass).then(function() {
     document.location.href='index.html';
-    document.location.href = 'index.html';
   }).catch(function(error) {
     // An error happened.
     var errorCode = error.code;
