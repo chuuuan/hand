@@ -40,13 +40,15 @@ function submitForm(e) {
 }
 
 
-function saveMessage(emailField, birthday, identity, name) {
+function saveMessage(emailField, birthday, identity, name, uid) {
   // Add a new document in collection uid
-  db.collection("User").doc(uid).set({
+  db.collection("User").doc(emailField).set({
       name: name,
       email: emailField,
       birthday: birthday,
-      identity: identity
+      identit: identity,
+      uid: uid,
+      eye_temp:"eye_1"
     })
     .then(function() {
       console.log("Document successfully written!");
@@ -54,6 +56,39 @@ function saveMessage(emailField, birthday, identity, name) {
     })
     .catch(function(error) {
       console.error("Error writing document: ", error);
+    });
+
+    db.collection("User").doc(emailField).collection("eyesight").doc("eye_1").set({
+      blind :"0",
+      date :"0",
+      eye_flash_left :"0",
+      eye_flash_right :"0",
+      eye_left :"0",
+      eye_right :"0",
+      mostiquto :"0",
+      yellow :"0"
+    });
+
+    db.collection("User").doc(emailField).collection("eyesight").doc("eye_2").set({
+      blind :"0",
+      date :"0",
+      eye_flash_left :"0",
+      eye_flash_right :"0",
+      eye_left :"0",
+      eye_right :"0",
+      mostiquto :"0",
+      yellow :"0"
+    });
+
+    db.collection("User").doc(emailField).collection("eyesight").doc("eye_3").set({
+      blind :"0",
+      date :"0",
+      eye_flash_left :"0",
+      eye_flash_right :"0",
+      eye_left :"0",
+      eye_right :"0",
+      mostiquto :"0",
+      yellow :"0"
     });
 
 }
