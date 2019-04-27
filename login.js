@@ -10,30 +10,25 @@ firebase.auth().onAuthStateChanged(function(user) {
 
   var user = firebase.auth().currentUser;
   var uid;
-  uid = user.uid;
+  var email;
+
 
 
 
 
   if (user != null) {
+      uid = user.uid;
+      email = user.email;
+      console.log(email);
 
     db.collection("temp").doc("temp_user").set({
       uid: uid
     });
 
 
-    db.collection("User").doc(uid).collection("eyesight").doc("eye").set({
-      blind :"0",
-      date :"0",
-      eye_flash_left :"0",
-      eye_flash_right :"0",
-      eye_left :"0",
-      eye_right :"0",
-      mostiquto :"0",
-      yellow :"0"
-    });
 
-    db.collection("User").doc(uid)
+
+    db.collection("User").doc(email)
     .onSnapshot(function(doc) {
         console.log("Current data: ", doc.data());
         if (doc.exists) {
