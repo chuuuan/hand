@@ -19,6 +19,7 @@ firebase.auth().onAuthStateChanged(function(user) {
   if (user != null) {
       uid = user.uid;
       email = user.email;
+      window.sessionStorage.setItem("email",email);
       console.log(email);
 
     db.collection("temp").doc("temp_user").set({

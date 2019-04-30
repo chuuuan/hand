@@ -2,6 +2,14 @@
 <head>
   <style>
 
+  .div_eye{
+    position: absolute;
+    top: 88;
+    left: 123;
+
+
+  }
+
   .p{
     position: absolute;
     top: -4;
@@ -15,9 +23,30 @@
   <div>
     <a href="index.html"><img class="p" style="cursor:pointer" src="images/btn_backtohome.png"></a>
   </div>
+  <div class="div_eye">
+    <h1>ghjjh</h1>
+    <h2>hhk</h2>
+    <h2>hjhjhjk</h2>
+  </div>
+
+  <script src="https://www.gstatic.com/firebasejs/5.9.0/firebase.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.9.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.9.0/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.9.1/firebase-firestore.js"></script>
+  <script>
+    // Initialize Firebase
+    var config = {
+      apiKey: "AIzaSyB3RG9-49l74BOv0FEyLn5sHI6duZlSpwQ",
+      authDomain: "eye-detection-6fd57.firebaseapp.com",
+      databaseURL: "https://eye-detection-6fd57.firebaseio.com",
+      projectId: "eye-detection-6fd57",
+      storageBucket: "eye-detection-6fd57.appspot.com",
+      messagingSenderId: "882742229686"
+    };
+    firebase.initializeApp(config);
+    </script>
 
 
-
-
+  <script src="history.js"></script>
 </body>
 </html>
