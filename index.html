@@ -6,13 +6,24 @@
   <title>Hello World!</title>
   <script type="text/javascript" src="index.js"></script>
   <style>
-
     .div {
       height: 126px;
       width: 300px;
       position: absolute;
       top: 50px;
       left: 100px;
+    }
+
+    .div2 {
+      top: 210px;
+      left: 130px;
+      position: absolute;
+    }
+
+    .div3 {
+      top: 210px;
+      left: 300px;
+      position: absolute;
     }
 
     .button {
@@ -84,30 +95,32 @@
       transform: translateY(8px);
     }
 
-    .p{
+    .p {
       position: absolute;
       top: -3.6px;
       left: -8.6px;
     }
-    .go{
+
+    .go {
       position: absolute;
       cursor: pointer;
       top: 50px;
       left: 492.5px;
     }
-    .line{
+
+    .line {
       position: absolute;
       cursor: pointer;
       top: 290px;
       left: 610px;
     }
-    .history{
+
+    .history {
       position: absolute;
       cursor: pointer;
       top: 320px;
       left: 425px;
     }
-
   </style>
 
 </head>
@@ -117,22 +130,30 @@
   <div class="div">
     <h1 style="font-family:Microsoft JhengHei;" id="textname"></h1>
   </div>
+  <div class="div2">
+    <h1 id="eye_left"></h1>
+  </div>
+  <div class="div3">
+    <h1 id="eye_right"></h1>
+  </div>
   <div class="history">
-    <a href="history.html"><u><h5>歷史紀錄</h5></u></a>
+    <a href="history.html"><u>
+        <h5>歷史紀錄</h5>
+      </u></a>
   </div>
   <div class="go">
-  <img style="width:87.5%" src="images\掛號領藥由此去.gif">
+    <img style="width:87.5%" src="images\掛號領藥由此去.gif">
   </div>
 
   <div class="line">
-  <img style="width:80%" src="images\addlinefriend.png">
+    <img style="width:80%" src="images\addlinefriend.png">
   </div>
 
   <a href="eyetest.html"><button class="button" id="starttest" style="margin-left:7.6%;margin-top:41%"><span>智慧驗光 </span></button></a>
   <a href="eyeinfor.html"><button class="button2" id="btn_relaxureye" style="margin-left:25.3%">病理知識</button></a>
   <a href="registered.html"><button class="button2" id="btn_registration" style="margin-left:3%">眼科掛號</button></a>
   <div class="p">
-    <img  style="cursor:pointer" onclick="logout()" src="images/btn_logout.png">
+    <img style="cursor:pointer" onclick="logout()" src="images/btn_logout.png">
   </div>
 
 
@@ -151,8 +172,8 @@
       messagingSenderId: "882742229686"
     };
     firebase.initializeApp(config);
-    const auth=firebase.auth();
-    const db =firebase.firestore();
+    const auth = firebase.auth();
+    const db = firebase.firestore();
   </script>
 
 
@@ -168,4 +189,5 @@
 
 
 </body>
+
 </html>

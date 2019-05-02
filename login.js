@@ -11,34 +11,34 @@ firebase.auth().onAuthStateChanged(function(user) {
   var user = firebase.auth().currentUser;
   var uid;
   var email;
+  var eye_temp;
+  var a = 10;
+
 
 
 
 
 
   if (user != null) {
-      uid = user.uid;
-      email = user.email;
-      window.sessionStorage.setItem("email",email);
-      console.log(email);
+    uid = user.uid;
+    email = user.email;
+    window.sessionStorage.setItem("email", email);
+    console.log(email);
 
     db.collection("temp").doc("temp_user").set({
       uid: uid
     });
 
-
-
-
     db.collection("User").doc(email)
-    .onSnapshot(function(doc) {
+      .onSnapshot(function(doc) {
         console.log("Current data: ", doc.data());
         if (doc.exists) {
-            document.getElementById("textname").innerHTML = doc.data().name;
-          } else {
-            // doc.data() will be undefined in this case
-            console.log("No such document!");
-          }
-     });
+          document.getElementById("textname").innerHTML = doc.data().name;
+        }
+      });
+
+    get_temp(email);
+
 
   } else {
     console.log("error();");
@@ -48,7 +48,29 @@ firebase.auth().onAuthStateChanged(function(user) {
 });
 
 
+function get_temp(email, eye_temp) {
+  db.collection("User").doc(email).get().then(function(doc, eye_temp) {
+    if (doc.exists) {
+      eye_temp = doc.data().eye_temp;
+      console.log(eye_temp);
+      console.log("Document data:", eye_temp);
+      db.collection("User").doc(email).collection("eyesight").doc(eye_temp).get().then(function(doc) {
+        if (doc.exists) {
+          document.getElementById("eye_left").innerHTML = doc.data().eye_left;
+          document.getElementById("eye_right").innerHTML = doc.data().eye_right;
+        }
+      });
+    } else {
+      // doc.data() will be undefined in this case
+      console.log("No such document!");
+    }
+  }).catch(function(error) {
+    console.log("Error getting document:", error);
+  });
 
+
+
+}
 
 
 //else {
@@ -65,7 +87,7 @@ function login() {
   var userPass = document.getElementById("password_field").value;
 
   firebase.auth().signInWithEmailAndPassword(userEmail, userPass).then(function() {
-    document.location.href='index.html';
+    document.location.href = 'index.html';
   }).catch(function(error) {
     // An error happened.
     var errorCode = error.code;
@@ -74,7 +96,6 @@ function login() {
 }
 
 function register() {
-
   window.location = 'register.html'
 }
 
