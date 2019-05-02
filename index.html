@@ -108,6 +108,57 @@
       left: 425px;
     }
 
+    /*jumpout box*/
+    /* Center the image and position the close button */
+    .imgcontainer {
+      text-align: center;
+      margin: 24px 0 12px 0;
+      position: relative;
+    }
+
+    .container {
+      padding: 16px;
+    }
+
+    /* The Modal (background) */
+    .modal {
+      display: none; /* Hidden by default */
+      position: fixed; /* Stay in place */
+      z-index: 1; /* Sit on top */
+      left: 0;
+      top: 0;
+      width: 100%; /* Full width */
+      height: 100%; /* Full height */
+      overflow: auto; /* Enable scroll if needed */
+      background-color: rgb(0,0,0); /* Fallback color */
+      background-color: rgba(0,0,0,0.8); /* Black w/ opacity */
+      padding-top: 60px;
+    }
+
+    /* Modal Content/Box */
+    .modal-content {
+      background-color: #fefefe;
+      margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+      border: 1px solid #888;
+      width: 80%; /* Could be more or less, depending on screen size */
+    }
+
+    /* The Close Button (x) */
+    .close {
+      position: absolute;
+      right: 35px;
+      top: -10px;
+      color: #ffffff;
+      font-size: 50px;
+      font-weight: bold;
+    }
+
+    .close:hover,
+    .close:focus {
+      color: red;
+      cursor: pointer;
+    }
+
   </style>
 
 </head>
@@ -125,14 +176,20 @@
   </div>
 
   <div class="line">
-  <img style="width:80%" src="images\addlinefriend.png">
+  <img onclick="document.getElementById('id01').style.display='block'" style="width:auto;" style="width:80%" src="images\addlinefriend.png">
+  <div id="id01" class="modal">
+    <div class="imgcontainer">
+      <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+      <img src="images/lineQR.png" >
+    </div>
+  </div>
   </div>
 
   <a href="eyetest.html"><button class="button" id="starttest" style="margin-left:7.6%;margin-top:41%"><span>智慧驗光 </span></button></a>
   <a href="eyeinfor.html"><button class="button2" id="btn_relaxureye" style="margin-left:25.3%">病理知識</button></a>
   <a href="registered.html"><button class="button2" id="btn_registration" style="margin-left:3%">眼科掛號</button></a>
   <div class="p">
-    <img  style="cursor:pointer" onclick="logout()" src="images/btn_logout.png">
+    <img  style="cursor:pointer" onclick="logout()" src="images/btn_logout1.png">
   </div>
 
 
@@ -153,6 +210,19 @@
     firebase.initializeApp(config);
     const auth=firebase.auth();
     const db =firebase.firestore();
+
+    //jumpout images
+    // Get the modal
+    var modal = document.getElementById('id01');
+
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
+
+
   </script>
 
 
