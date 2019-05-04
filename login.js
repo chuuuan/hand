@@ -12,7 +12,7 @@ firebase.auth().onAuthStateChanged(function(user) {
   var uid;
   var email;
   var eye_temp;
-  var a = 10;
+  
 
 
 
