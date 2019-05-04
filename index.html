@@ -14,16 +14,18 @@
       left: 100px;
     }
 
-    .div2 {
-      top: 210px;
-      left: 130px;
+    .eyeleft {
+      top: 212px;
+      left: 184px;
       position: absolute;
+      cursor: pointer;
     }
 
-    .div3 {
-      top: 210px;
-      left: 300px;
+    .eyeright {
+      top: 212px;
+      left: 366px;
       position: absolute;
+      cursor: pointer;
     }
 
     .button {
@@ -111,8 +113,8 @@
     .line {
       position: absolute;
       cursor: pointer;
-      top: 290px;
-      left: 610px;
+      top: 280px;
+      left: 590px;
     }
 
     .history {
@@ -121,8 +123,11 @@
       top: 320px;
       left: 425px;
     }
-<<<<<<< HEAD
-=======
+
+    a {
+    color:black;
+    text-decoration:none;
+    }
 
     /*jumpout box*/
     /* Center the image and position the close button */
@@ -175,21 +180,21 @@
       cursor: pointer;
     }
 
->>>>>>> 9e9d393a4d2114f6005b52c9c166858477f3f571
+
   </style>
 
 </head>
 
-<body background="images/bkg_home.png">
+<body background="images/bkg_home2.png">
 
   <div class="div">
     <h1 style="font-family:Microsoft JhengHei;" id="textname"></h1>
   </div>
-  <div class="div2">
-    <h1 id="eye_left"></h1>
+  <div class="eyeleft">
+    <a href="history.html"><h1 style="font-family:Microsoft JhengHei;" id="eye_left"></h1></a>
   </div>
-  <div class="div3">
-    <h1 id="eye_right"></h1>
+  <div class="eyeright">
+    <a href="history.html"><h1 style="font-family:Microsoft JhengHei;" id="eye_right"></h1></a>
   </div>
   <div class="history">
     <a href="history.html"><u>
@@ -201,28 +206,20 @@
   </div>
 
   <div class="line">
-<<<<<<< HEAD
-    <img style="width:80%" src="images\addlinefriend.png">
-=======
   <img onclick="document.getElementById('id01').style.display='block'" style="width:auto;" style="width:80%" src="images\addlinefriend.png">
-  <div id="id01" class="modal">
-    <div class="imgcontainer">
-      <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
-      <img src="images/lineQR.png" >
+    <div id="id01" class="modal">
+      <div class="imgcontainer">
+        <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+        <img src="images/lineQR.png" >
+      </div>
     </div>
-  </div>
->>>>>>> 9e9d393a4d2114f6005b52c9c166858477f3f571
   </div>
 
   <a href="eyetest.html"><button class="button" id="starttest" style="margin-left:7.6%;margin-top:41%"><span>智慧驗光 </span></button></a>
   <a href="eyeinfor.html"><button class="button2" id="btn_relaxureye" style="margin-left:25.3%">病理知識</button></a>
   <a href="registered.html"><button class="button2" id="btn_registration" style="margin-left:3%">眼科掛號</button></a>
   <div class="p">
-<<<<<<< HEAD
-    <img style="cursor:pointer" onclick="logout()" src="images/btn_logout.png">
-=======
-    <img  style="cursor:pointer" onclick="logout()" src="images/btn_logout1.png">
->>>>>>> 9e9d393a4d2114f6005b52c9c166858477f3f571
+    <img style="cursor:pointer" onclick="logout()" src="images/btn_logout1.png">
   </div>
 
 
@@ -241,12 +238,10 @@
       messagingSenderId: "882742229686"
     };
     firebase.initializeApp(config);
-<<<<<<< HEAD
     const auth = firebase.auth();
     const db = firebase.firestore();
-=======
-    const auth=firebase.auth();
-    const db =firebase.firestore();
+
+
 
     //jumpout images
     // Get the modal
@@ -259,16 +254,7 @@
         }
     }
 
-
->>>>>>> 9e9d393a4d2114f6005b52c9c166858477f3f571
   </script>
-
-
-
-
-
-
-
 
   <script src="login.js"></script>
 
