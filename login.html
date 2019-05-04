@@ -31,12 +31,6 @@
   }
 
 
-  /* Center the image and position the close button */
-  .imgcontainer {
-    text-align: center;
-    margin: 24px 0 12px 0;
-    position: relative;
-  }
 
   img.avatar {
     width: 40%;
@@ -88,8 +82,6 @@
 <body background="images/bkg_test.png">
 
   <div id="login_div" class="container modal-content animate">
-
-
   <label for="uname"><b>帳號</b></label>
   <input type="email" placeholder="Email" id="email_field" required />
   <label for="psw"><b>密碼</b></label>
@@ -127,26 +119,11 @@
     const db =firebase.firestore();
   </script>
   <script src="login.js"></script>
-
-
-  <!-- The surrounding HTML is left untouched by FirebaseUI.
-       Your app may use that space for branding, controls and other customizations.-->
-  <div id="firebaseui-auth-container"></div>
-
-</body>
-=======
-     // Initialize the FirebaseUI Widget using Firebase.
-     var ui = new firebaseui.auth.AuthUI(firebase.auth());
-     // The start method will wait until the DOM is loaded.
-     ui.start('#firebaseui-auth-container', uiConfig);
-   </script>
- </head>
- <body>
    <!-- The surrounding HTML is left untouched by FirebaseUI.
         Your app may use that space for branding, controls and other customizations.-->
    <div id="firebaseui-auth-container"></div>
  </body>
->>>>>>> 9c8de03a95c8d5d2e2323548b983ff7d2b70cf28
+
 
 
 
