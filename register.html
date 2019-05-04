@@ -15,6 +15,8 @@
         padding: 10px;
         background-color: white;
         border: 1px solid #888;
+        background-color:rgba(0,170,141,0.4);
+        border: 0.5px solid #008975;
       }
 
       /* Full-width input fields */
@@ -43,6 +45,7 @@
       /* Set a style for the submit button */
       .registerbtn {
         background-color: #4CAF50;
+        background-color: #FFBA00;
         color: white;
         padding: 10px 15px;
         margin: 0px 0;
@@ -58,7 +61,7 @@
 
       /* Add a blue text color to links */
       a {
-        color: dodgerblue;
+        color:#0D00AF ;
       }
 
        p{
@@ -78,25 +81,25 @@
 
 <body background="images/bkg_test.png">
   <div class="container j" style="margin:0 auto">
-    <h1>註冊</h1>
+    <h1 style="font-family:Microsoft JhengHei;">註冊</h1>
     <form  id="form">
-      <label for="email"><b>信箱</b></label>
+      <label for="email" style="font-family:Microsoft JhengHei;"><b>信箱</b></label>
       <input id="txtEmail" type="email" placeholder="輸入信箱" required>
 
-      <label for="psw"><b>密碼</b></label>
+      <label for="psw" style="font-family:Microsoft JhengHei;"><b>密碼</b></label>
       <input id="txtPassword" type="password" placeholder="輸入密碼" required>
 
-      <label for="name"><b>姓名</b></label>
+      <label for="name" style="font-family:Microsoft JhengHei;"><b>姓名</b></label>
       <input id="txtName" type="name" placeholder="姓名" required>
 
-      <label for="name"><b>生日</b></label>
+      <label for="name" style="font-family:Microsoft JhengHei;"><b>生日</b></label>
       <input id="txtBirthday" type="birthday" placeholder="yyyy/mm/dd" required>
 
-      <label for="name"><b>身分證字號</b></label>
+      <label for="name" style="font-family:Microsoft JhengHei;"><b>身分證字號</b></label>
       <input id="txtIdentity" type="identity" placeholder="A000000000" required>
 
 
-      <button type="submit" class="registerbtn">Submit</button>
+      <button type="submit" class="registerbtn">送出</button>
       <p>已經有帳號？<a href="login.html">登入</a>.</p>
 
   </form>

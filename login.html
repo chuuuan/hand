@@ -17,13 +17,15 @@
 
   /* Set a style for all buttons */
   button {
-    background-color: #4CAF50;
+    background-color: #FFBA00;
     color: white;
     padding: 14px 20px;
     margin: 8px 0;
     border: none;
-    cursor: pointer;
     width: 100%;
+    cursor: pointer;
+
+
   }
 
   button:hover {
@@ -31,12 +33,6 @@
   }
 
 
-  /* Center the image and position the close button */
-  .imgcontainer {
-    text-align: center;
-    margin: 24px 0 12px 0;
-    position: relative;
-  }
 
   img.avatar {
     width: 40%;
@@ -56,9 +52,9 @@
 
   /* Modal Content/Box */
   .modal-content {
-    background-color: #fefefe;
+    background-color:rgba(0,170,141,0.4);
     margin: 5% auto 30% auto; /* 5% from the top, 15% from the bottom and centered */
-    border: 1px solid #888;
+    border: 0.5px solid #008975;
     width: 50%; /* Could be more or less, depending on screen size */
   }
 
@@ -104,9 +100,6 @@
 </div>
 
 
-
-
-
   <script src="https://www.gstatic.com/firebasejs/5.9.0/firebase.js"></script>
   <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
   <script src="https://www.gstatic.com/firebasejs/5.9.0/firebase-app.js"></script>
@@ -128,27 +121,5 @@
   </script>
   <script src="login.js"></script>
 
-
-  <!-- The surrounding HTML is left untouched by FirebaseUI.
-       Your app may use that space for branding, controls and other customizations.-->
-  <div id="firebaseui-auth-container"></div>
-
 </body>
-=======
-     // Initialize the FirebaseUI Widget using Firebase.
-     var ui = new firebaseui.auth.AuthUI(firebase.auth());
-     // The start method will wait until the DOM is loaded.
-     ui.start('#firebaseui-auth-container', uiConfig);
-   </script>
- </head>
- <body>
-   <!-- The surrounding HTML is left untouched by FirebaseUI.
-        Your app may use that space for branding, controls and other customizations.-->
-   <div id="firebaseui-auth-container"></div>
- </body>
->>>>>>> 9c8de03a95c8d5d2e2323548b983ff7d2b70cf28
-
-
-
-
 </html>
