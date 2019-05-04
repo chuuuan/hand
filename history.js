@@ -19,27 +19,44 @@ function get_eyesight(eye_temp, email) {
     db.collection("User").doc(email).collection("eyesight").doc(eye_temp).get().then(function(doc) {
       document.getElementById("eye_left1").innerHTML = doc.data().eye_left;
       document.getElementById("eye_right1").innerHTML = doc.data().eye_right;
+      document.getElementById("eye_flash_left1").innerHTML = doc.data().eye_flash_left;
+      document.getElementById("eye_flash_right1").innerHTML = doc.data().eye_flash_left;
+
     });
     db.collection("User").doc(email).collection("eyesight").doc("eye_2").get().then(function(doc) {
       document.getElementById("eye_left2").innerHTML = doc.data().eye_left;
       document.getElementById("eye_right2").innerHTML = doc.data().eye_right;
+      document.getElementById("eye_flash_left2").innerHTML = doc.data().eye_flash_left;
+      document.getElementById("eye_flash_right2").innerHTML = doc.data().eye_flash_left;
     });
     db.collection("User").doc(email).collection("eyesight").doc("eye_3").get().then(function(doc) {
       document.getElementById("eye_left3").innerHTML = doc.data().eye_left;
       document.getElementById("eye_right3").innerHTML = doc.data().eye_right;
+      document.getElementById("eye_flash_left3").innerHTML = doc.data().eye_flash_left;
+      document.getElementById("eye_flash_right3").innerHTML = doc.data().eye_flash_left;
+
     });
   } else if (eye_temp == 'eye_2') {
     db.collection("User").doc(email).collection("eyesight").doc(eye_temp).get().then(function(doc) {
       document.getElementById("eye_left1").innerHTML = doc.data().eye_left;
       document.getElementById("eye_right1").innerHTML = doc.data().eye_right;
+      document.getElementById("eye_flash_left1").innerHTML = doc.data().eye_flash_left;
+      document.getElementById("eye_flash_right1").innerHTML = doc.data().eye_flash_left;
+
     });
     db.collection("User").doc(email).collection("eyesight").doc("eye_3").get().then(function(doc) {
       document.getElementById("eye_left2").innerHTML = doc.data().eye_left;
       document.getElementById("eye_right2").innerHTML = doc.data().eye_right;
+      document.getElementById("eye_flash_left2").innerHTML = doc.data().eye_flash_left;
+      document.getElementById("eye_flash_right2").innerHTML = doc.data().eye_flash_left;
+
     });
     db.collection("User").doc(email).collection("eyesight").doc("eye_1").get().then(function(doc) {
       document.getElementById("eye_left3").innerHTML = doc.data().eye_left;
       document.getElementById("eye_right3").innerHTML = doc.data().eye_right;
+      document.getElementById("eye_flash_left3").innerHTML = doc.data().eye_flash_left;
+      document.getElementById("eye_flash_right3").innerHTML = doc.data().eye_flash_left;
+
     });
 
 
@@ -47,14 +64,23 @@ function get_eyesight(eye_temp, email) {
     db.collection("User").doc(email).collection("eyesight").doc(eye_temp).get().then(function(doc) {
       document.getElementById("eye_left1").innerHTML = doc.data().eye_left;
       document.getElementById("eye_right1").innerHTML = doc.data().eye_right;
+      document.getElementById("eye_flash_left1").innerHTML = doc.data().eye_flash_left;
+      document.getElementById("eye_flash_right1").innerHTML = doc.data().eye_flash_left;
+
     });
     db.collection("User").doc(email).collection("eyesight").doc("eye_1").get().then(function(doc) {
       document.getElementById("eye_left2").innerHTML = doc.data().eye_left;
       document.getElementById("eye_right2").innerHTML = doc.data().eye_right;
+      document.getElementById("eye_flash_left2").innerHTML = doc.data().eye_flash_left;
+      document.getElementById("eye_flash_right2").innerHTML = doc.data().eye_flash_left;
+
     });
     db.collection("User").doc(email).collection("eyesight").doc("eye_2").get().then(function(doc) {
       document.getElementById("eye_left3").innerHTML = doc.data().eye_left;
       document.getElementById("eye_right3").innerHTML = doc.data().eye_right;
+      document.getElementById("eye_flash_left3").innerHTML = doc.data().eye_flash_left;
+      document.getElementById("eye_flash_right3").innerHTML = doc.data().eye_flash_left;
+
     });
   }
 }

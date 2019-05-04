@@ -46,7 +46,7 @@ function saveMessage(emailField, birthday, identity, name, uid) {
       name: name,
       email: emailField,
       birthday: birthday,
-      identit: identity,
+      identity: identity,
       uid: uid,
       eye_temp:"eye_1"
     })
