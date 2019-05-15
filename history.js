@@ -21,6 +21,12 @@ function get_eyesight(eye_temp, email) {
       document.getElementById("eye_right1").innerHTML = doc.data().eye_right;
       document.getElementById("eye_flash_left1").innerHTML = doc.data().eye_flash_left;
       document.getElementById("eye_flash_right1").innerHTML = doc.data().eye_flash_left;
+      document.getElementById("eye_yello_left1").innerHTML = doc.data().yellow;
+      document.getElementById("eye_fly_left1").innerHTML = doc.data().mostiquto;
+      document.getElementById("eye_blind_left1").innerHTML = doc.data().blind;
+
+
+
 
     });
     db.collection("User").doc(email).collection("eyesight").doc("eye_2").get().then(function(doc) {
@@ -28,12 +34,20 @@ function get_eyesight(eye_temp, email) {
       document.getElementById("eye_right2").innerHTML = doc.data().eye_right;
       document.getElementById("eye_flash_left2").innerHTML = doc.data().eye_flash_left;
       document.getElementById("eye_flash_right2").innerHTML = doc.data().eye_flash_left;
+      document.getElementById("eye_yello_left2").innerHTML = doc.data().yellow;
+      document.getElementById("eye_fly_left2").innerHTML = doc.data().mostiquto;
+      document.getElementById("eye_blind_left2").innerHTML = doc.data().blind;
+
     });
     db.collection("User").doc(email).collection("eyesight").doc("eye_3").get().then(function(doc) {
       document.getElementById("eye_left3").innerHTML = doc.data().eye_left;
       document.getElementById("eye_right3").innerHTML = doc.data().eye_right;
       document.getElementById("eye_flash_left3").innerHTML = doc.data().eye_flash_left;
       document.getElementById("eye_flash_right3").innerHTML = doc.data().eye_flash_left;
+      document.getElementById("eye_yello_left3").innerHTML = doc.data().yellow;
+      document.getElementById("eye_fly_left3").innerHTML = doc.data().mostiquto;
+      document.getElementById("eye_blind_left3").innerHTML = doc.data().blind;
+
 
     });
   } else if (eye_temp == 'eye_2') {
@@ -42,6 +56,10 @@ function get_eyesight(eye_temp, email) {
       document.getElementById("eye_right1").innerHTML = doc.data().eye_right;
       document.getElementById("eye_flash_left1").innerHTML = doc.data().eye_flash_left;
       document.getElementById("eye_flash_right1").innerHTML = doc.data().eye_flash_left;
+      document.getElementById("eye_yello_left1").innerHTML = doc.data().yellow;
+      document.getElementById("eye_fly_left1").innerHTML = doc.data().mostiquto;
+      document.getElementById("eye_blind_left1").innerHTML = doc.data().blind;
+
 
     });
     db.collection("User").doc(email).collection("eyesight").doc("eye_3").get().then(function(doc) {
@@ -49,6 +67,10 @@ function get_eyesight(eye_temp, email) {
       document.getElementById("eye_right2").innerHTML = doc.data().eye_right;
       document.getElementById("eye_flash_left2").innerHTML = doc.data().eye_flash_left;
       document.getElementById("eye_flash_right2").innerHTML = doc.data().eye_flash_left;
+      document.getElementById("eye_yello_left2").innerHTML = doc.data().yellow;
+      document.getElementById("eye_fly_left2").innerHTML = doc.data().mostiquto;
+      document.getElementById("eye_blind_left2").innerHTML = doc.data().blind;
+
 
     });
     db.collection("User").doc(email).collection("eyesight").doc("eye_1").get().then(function(doc) {
@@ -56,6 +78,10 @@ function get_eyesight(eye_temp, email) {
       document.getElementById("eye_right3").innerHTML = doc.data().eye_right;
       document.getElementById("eye_flash_left3").innerHTML = doc.data().eye_flash_left;
       document.getElementById("eye_flash_right3").innerHTML = doc.data().eye_flash_left;
+      document.getElementById("eye_yello_left3").innerHTML = doc.data().yellow;
+      document.getElementById("eye_fly_left3").innerHTML = doc.data().mostiquto;
+      document.getElementById("eye_blind_left3").innerHTML = doc.data().blind;
+
 
     });
 
@@ -66,6 +92,10 @@ function get_eyesight(eye_temp, email) {
       document.getElementById("eye_right1").innerHTML = doc.data().eye_right;
       document.getElementById("eye_flash_left1").innerHTML = doc.data().eye_flash_left;
       document.getElementById("eye_flash_right1").innerHTML = doc.data().eye_flash_left;
+      document.getElementById("eye_yello_left1").innerHTML = doc.data().yellow;
+      document.getElementById("eye_fly_left1").innerHTML = doc.data().mostiquto;
+      document.getElementById("eye_blind_left1").innerHTML = doc.data().blind;
+
 
     });
     db.collection("User").doc(email).collection("eyesight").doc("eye_1").get().then(function(doc) {
@@ -73,6 +103,10 @@ function get_eyesight(eye_temp, email) {
       document.getElementById("eye_right2").innerHTML = doc.data().eye_right;
       document.getElementById("eye_flash_left2").innerHTML = doc.data().eye_flash_left;
       document.getElementById("eye_flash_right2").innerHTML = doc.data().eye_flash_left;
+      document.getElementById("eye_yello_left2").innerHTML = doc.data().yellow;
+      document.getElementById("eye_fly_left2").innerHTML = doc.data().mostiquto;
+      document.getElementById("eye_blind_left2").innerHTML = doc.data().blind;
+
 
     });
     db.collection("User").doc(email).collection("eyesight").doc("eye_2").get().then(function(doc) {
@@ -80,6 +114,10 @@ function get_eyesight(eye_temp, email) {
       document.getElementById("eye_right3").innerHTML = doc.data().eye_right;
       document.getElementById("eye_flash_left3").innerHTML = doc.data().eye_flash_left;
       document.getElementById("eye_flash_right3").innerHTML = doc.data().eye_flash_left;
+      document.getElementById("eye_yello_left3").innerHTML = doc.data().yellow;
+      document.getElementById("eye_fly_left3").innerHTML = doc.data().mostiquto;
+      document.getElementById("eye_blind_left3").innerHTML = doc.data().blind;
+
 
     });
   }
