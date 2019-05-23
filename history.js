@@ -24,10 +24,6 @@ function get_eyesight(eye_temp, email) {
       document.getElementById("eye_yello_left1").innerHTML = doc.data().yellow;
       document.getElementById("eye_fly_left1").innerHTML = doc.data().mostiquto;
       document.getElementById("eye_blind_left1").innerHTML = doc.data().blind;
-
-
-
-
     });
     db.collection("User").doc(email).collection("eyesight").doc("eye_2").get().then(function(doc) {
       document.getElementById("eye_left2").innerHTML = doc.data().eye_left;
