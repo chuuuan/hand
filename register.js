@@ -59,36 +59,36 @@ function saveMessage(emailField, birthday, identity, name, uid) {
     });
 
     db.collection("User").doc(emailField).collection("eyesight").doc("eye_1").set({
-      blind :"0",
-      date :"0",
-      eye_flash_left :"0",
-      eye_flash_right :"0",
-      eye_left :"0",
-      eye_right :"0",
-      mostiquto :"0",
-      yellow :"0"
+      blind :"null",
+      date :"null",
+      eye_flash_left :"null",
+      eye_flash_right :"null",
+      eye_left :"null",
+      eye_right :"null",
+      mostiquto :"null",
+      yellow :"null"
     });
 
     db.collection("User").doc(emailField).collection("eyesight").doc("eye_2").set({
-      blind :"0",
-      date :"0",
-      eye_flash_left :"0",
-      eye_flash_right :"0",
-      eye_left :"0",
-      eye_right :"0",
-      mostiquto :"0",
-      yellow :"0"
+      blind :"null",
+      date :"null",
+      eye_flash_left :"null",
+      eye_flash_right :"null",
+      eye_left :"null",
+      eye_right :"null",
+      mostiquto :"null",
+      yellow :"null"
     });
 
     db.collection("User").doc(emailField).collection("eyesight").doc("eye_3").set({
-      blind :"0",
-      date :"0",
-      eye_flash_left :"0",
-      eye_flash_right :"0",
-      eye_left :"0",
-      eye_right :"0",
-      mostiquto :"0",
-      yellow :"0"
+      blind :"null",
+      date :"null",
+      eye_flash_left :"null",
+      eye_flash_right :"null",
+      eye_left :"null",
+      eye_right :"null",
+      mostiquto :"null",
+      yellow :"null"
     });
 
 }
