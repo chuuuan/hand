@@ -1,9 +1,13 @@
-const identify2 = sessionStorage.getItem('identify');
-const date2 = sessionStorage.getItem('date');
-document.getElementById('date2').value = date2;
-document.getElementById('Submit1').addEventListener('click', savedata);
+var identify2 = sessionStorage.getItem('identify');
+var date2 = sessionStorage.getItem('date');
+document.getElementById('date1').value = date2;
+
 var db = firebase.firestore();
 
+function validate(){
+  alert('請於  '+date2+'  14:00看診 您得號碼為12號');
+  return document.location.href = 'index.html';
+}
 
 function savedata() {
 
