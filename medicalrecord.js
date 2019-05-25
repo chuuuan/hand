@@ -21,8 +21,6 @@ function savedata() {
   saveMessage(identify2, date2, txtName, allergic, phone, medic, medbox, txtbox);
 
   document.location.href = 'index.html';
-
-
 }
 
 
