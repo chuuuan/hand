@@ -11,13 +11,13 @@
     .div_left2 {
       position: absolute;
       top: 40px;
-      left: 515px;
+      left:515px;
     }
 
     .div_left3 {
       position: absolute;
       top: 40px;
-      left: 700px;
+      left:700px;
     }
 
     .div_right1 {
@@ -29,13 +29,12 @@
     .div_right2 {
       position: absolute;
       top: 40px;
-      left: 595px;
+      left:595px;
     }
-
     .div_right3 {
       position: absolute;
       top: 40px;
-      left: 780px;
+      left:780px;
     }
 
 
@@ -68,62 +67,100 @@
       top: 140px;
       left: 595px;
     }
-
     .div_flash_right3 {
       position: absolute;
       top: 140px;
       left: 780px;
     }
-
-    .div_yellow_left1 {
+    .div_yellow_left1{
       position: absolute;
       top: 245px;
-      left: 375px;
+      left: 330px;
     }
-
-    .div_yellow_left2 {
+    .div_yellow_right1{
       position: absolute;
       top: 245px;
-      left: 560px;
+      left: 410px;
     }
-
-    .div_yellow_left3 {
+    .div_yellow_left2{
       position: absolute;
       top: 245px;
-      left: 745px;
+      left: 515px;
     }
-    .div_fly_left1 {
+    .div_yellow_right2{
+      position: absolute;
+      top: 245px;
+      left: 595px;
+    }.div_yellow_left3{
+      position: absolute;
+      top: 245px;
+      left: 700px;
+    }
+    .div_yellow_right3{
+      position: absolute;
+      top: 245px;
+      left: 780px;
+    }
+    .div_fly_left1{
       position: absolute;
       top: 345px;
-      left: 375px;
+      left: 330px;
     }
-    .div_fly_left2 {
+    .div_fly_right1{
       position: absolute;
       top: 345px;
-      left: 560px;
+      left: 410px;
     }
-    .div_fly_left3 {
+    .div_fly_left2{
       position: absolute;
       top: 345px;
-      left: 745px;
+      left: 515px;
     }
-    .div_blind_left1 {
+    .div_fly_right2{
+      position: absolute;
+      top: 345px;
+      left: 595px;
+    }
+    .div_fly_left3{
+      position: absolute;
+      top: 345px;
+      left: 700px;
+    }
+    .div_fly_right3{
+      position: absolute;
+      top: 345px;
+      left: 780px;
+    }
+    .div_blind_left1{
       position: absolute;
       top: 440px;
-      left: 375px;
+      left: 330px;
     }
-    .div_blind_left2 {
+    .div_blind_right1{
       position: absolute;
       top: 440px;
-      left: 560px;
+      left: 410px;
     }
-    .div_blind_left3 {
+    .div_blind_left2{
       position: absolute;
       top: 440px;
-      left: 745px;
+      left: 515px;
     }
-
-
+    .div_blind_right2{
+      position: absolute;
+      top: 440px;
+      left: 595px;
+    }
+    .div_blind_left3{
+      position: absolute;
+      top: 440px;
+      left: 700px;
+    }
+    .div_blind_right3{
+      position: absolute;
+      top: 440px;
+      left: 780px;
+    }
 
 
     .p {
@@ -131,11 +168,70 @@
       top: -4;
       left: -9;
     }
+    .info{
+      position: absolute;
+      cursor: pointer;
+      top: 10;
+      right: 30;
 
-    h1,
-    h2 {
-      font-family: Microsoft JhengHei;
     }
+
+    h1,h2{
+      font-family:Microsoft JhengHei;
+    }
+
+
+    /*jumpout box*/
+    /* Center the image and position the close button */
+    .imgcontainer {
+      text-align: center;
+      margin: 24px 0 12px 0;
+      position: relative;
+    }
+
+    .container {
+      padding: 16px;
+    }
+
+    /* The Modal (background) */
+    .modal {
+      display: none; /* Hidden by default */
+      position: fixed; /* Stay in place */
+      z-index: 1; /* Sit on top */
+      left: 0;
+      top: 0;
+      width: 100%; /* Full width */
+      height: 100%; /* Full height */
+      overflow: auto; /* Enable scroll if needed */
+      background-color: rgb(0,0,0); /* Fallback color */
+      background-color: rgba(0,0,0,0.8); /* Black w/ opacity */
+      padding-top: 60px;
+    }
+
+    /* Modal Content/Box */
+    .modal-content {
+      background-color: #fefefe;
+      margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+      border: 1px solid #888;
+      width: 80%; /* Could be more or less, depending on screen size */
+    }
+
+    /* The Close Button (x) */
+    .close {
+      position: absolute;
+      right: 35px;
+      top: -10px;
+      color: #ffffff;
+      font-size: 50px;
+      font-weight: bold;
+    }
+
+    .close:hover,
+    .close:focus {
+      color: red;
+      cursor: pointer;
+    }
+
   </style>
 </head>
 
@@ -143,80 +239,100 @@
   <div>
     <a href="index.html"><img class="p" style="cursor:pointer" src="images/btn_backtohome.png"></a>
   </div>
+  <div>
+    <img onclick="document.getElementById('id01').style.display='block'" class="info" style="cursor:pointer" src="images/btn_scorerule.png">
+    <div id="id01" class="modal">
+      <div class="imgcontainer">
+        <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+        <img src="images/scorerule.png" >
+      </div>
+    </div>
+
+  </div>
   <div class="div_left1">
-    <h1 id="eye_left1"></h1>
-  </div>
-  <div class="div_left2">
-    <h1 id="eye_left2"></h1>
-  </div>
-  <div class="div_left3">
-    <h1 id="eye_left3"></h1>
-  </div>
+    <h1 id="eye_left1"></h1></div>
+    <div class="div_left2">
+      <h1 id="eye_left2"></h1></div>
+    <div class="div_left3">
+      <h1 id="eye_left3"></h1>
+    </div>
 
   <div class="div_right1">
-    <h1 id="eye_right1"></h1>
-  </div>
-  <div class="div_right2">
-    <h1 id="eye_right2"></h1>
-  </div>
-  <div class="div_right3">
-    <h1 id="eye_right3"></h1>
-  </div>
+    <h1 id="eye_right1"></h1></div>
+    <div class="div_right2">
+      <h1 id="eye_right2"></h1></div>
+    <div class="div_right3">
+      <h1 id="eye_right3"></h1>
+    </div>
 
   <div class="div_flash_left1">
-    <h2 id="eye_flash_left1"></h2>
-  </div>
-  <div class="div_flash_left2">
-    <h2 id="eye_flash_left2"></h2>
-  </div>
-  <div class="div_flash_left3">
-    <h2 id="eye_flash_left3"></h2>
-  </div>
+    <h2 id="eye_flash_left1"></h2></div>
+    <div class="div_flash_left2">
+      <h2 id="eye_flash_left2"></h2></div>
+    <div class="div_flash_left3">
+      <h2 id="eye_flash_left3"></h2>
+    </div>
 
   <div class="div_flash_right1">
-    <h2 id="eye_flash_right1"></h2>
-  </div>
-  <div class="div_flash_right2">
-    <h2 id="eye_flash_right2"></h2>
-  </div>
-  <div class="div_flash_right3">
-    <h2 id="eye_flash_right3"></h2>
-  </div>
-
-  <div class="div_yellow_left1">
-    <h2 id="eye_yello_left1"></h2>
-  </div>
-  <div class="div_yellow_left2">
-    <h2 id="eye_yello_left2"></h2>
-  </div>
-  <div class="div_yellow_left3">
-    <h2 id="eye_yello_left3"></h2>
-  </div>
-
-
-
-  <div class="div_fly_left1">
-    <h2 id="eye_fly_left1"></h2>
-  </div>
-  <div class="div_fly_left2">
-    <h2 id="eye_fly_left2"></h2>
-  </div>
-  <div class="div_fly_left3">
-    <h2 id="eye_fly_left3"></h2>
-  </div>
-
-
-  <div class="div_blind_left1">
-    <h2 id="eye_blind_left1"></h2>
-  </div>
-  <div class="div_blind_left2">
-    <h2 id="eye_blind_left2"></h2>
-  </div>
-  <div class="div_blind_left3">
-    <h2 id="eye_blind_left3"></h2>
-  </div>
-
-
+    <h2 id="eye_flash_right1"></h2></div>
+    <div class="div_flash_right2">
+      <h2 id="eye_flash_right2"></h2></div>
+      <div class="div_flash_right3">
+      <h2 id="eye_flash_right3"></h2>
+    </div>
+    <div class="div_yellow_left1">
+      <h2 id="eye_yello">沒有</h2>
+    </div>
+    <div class="div_yellow_right1">
+      <h2>沒有</h2>
+    </div>
+    <div class="div_yellow_left2">
+      <h2>沒有</h2>
+    </div>
+    <div class="div_yellow_right2">
+      <h2>沒有</h2>
+    </div>
+    <div class="div_yellow_left3">
+      <h2>沒有</h2>
+    </div>
+    <div class="div_yellow_right3">
+      <h2>沒有</h2>
+    </div>
+    <div class="div_fly_left1">
+      <h2>沒有</h2>
+    </div>
+    <div class="div_fly_right1">
+      <h2>沒有</h2>
+    </div>
+    <div class="div_fly_left2">
+      <h2>沒有</h2>
+    </div>
+    <div class="div_fly_right2">
+      <h2>沒有</h2>
+    </div>
+    <div class="div_fly_left3">
+      <h2>沒有</h2>
+    </div>
+    <div class="div_fly_right3">
+      <h2>沒有</h2>
+    </div>
+    <div class="div_blind_left1">
+      <h2>沒有</h2>
+    </div>
+    <div class="div_blind_right1">
+      <h2>沒有</h2>
+    </div>
+    <div class="div_blind_left2">
+      <h2>沒有</h2>
+    </div>
+    <div class="div_blind_right2">
+      <h2>沒有</h2>
+    </div><div class="div_blind_left3">
+      <h2>沒有</h2>
+    </div>
+    <div class="div_blind_right3">
+      <h2>沒有</h2>
+    </div>
 
 
   <script src="https://www.gstatic.com/firebasejs/5.9.0/firebase.js"></script>
@@ -234,6 +350,20 @@
       messagingSenderId: "882742229686"
     };
     firebase.initializeApp(config);
+
+
+
+    //jumpout images
+    // Get the modal
+    var modal = document.getElementById('id01');
+
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
+
   </script>
 
 
