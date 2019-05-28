@@ -88,21 +88,21 @@
     <a href="index.html"><img class="p" style="cursor:pointer" src="images/btn_backtohome.png"></a>
 
           <div class="precision">
-            <h1 style="font-size:60px;font-family:Microsoft JhengHei;color:#FFBA00;" id="textname">%</h1>
+            <h1 id="percentage" style="font-size:60px;font-family:Microsoft JhengHei;color:#FFBA00;" >%</h1>
           </div>
 
           <div class="HL">
-            <input type="text" id="date2" name="firstname" placeholder="左">
+            <input id="real_left" type="text" id="date2" name="firstname" placeholder="左">
           </div>
           <div class="HR">
-            <input type="text" id="date2" name="firstname" placeholder="右">
+            <input id="real_right" type="text" id="date2" name="firstname" placeholder="右">
           </div>
 
           <div class="EL">
-            <input type="text" id="date2" name="firstname" placeholder="左">
+            <input id="test_left" type="text" id="date2" name="firstname" placeholder="左">
           </div>
           <div class="ER">
-            <input type="text" id="date2" name="firstname" placeholder="右">
+            <input id="test_right" type="text" id="date2" name="firstname" placeholder="右">
           </div>
 
 
@@ -111,7 +111,25 @@
             <button id="Submit1" type="submit" name="Submit">送出</button>
           </div>
 
+          <script src="https://www.gstatic.com/firebasejs/5.9.0/firebase.js"></script>
+          <script src="https://www.gstatic.com/firebasejs/5.9.0/firebase-app.js"></script>
+          <script src="https://www.gstatic.com/firebasejs/5.9.0/firebase-auth.js"></script>
+          <script src="https://www.gstatic.com/firebasejs/5.9.1/firebase-firestore.js"></script>
+          <script>
+            // Initialize Firebase
+            var config = {
+              apiKey: "AIzaSyB3RG9-49l74BOv0FEyLn5sHI6duZlSpwQ",
+              authDomain: "eye-detection-6fd57.firebaseapp.com",
+              databaseURL: "https://eye-detection-6fd57.firebaseio.com",
+              projectId: "eye-detection-6fd57",
+              storageBucket: "eye-detection-6fd57.appspot.com",
+              messagingSenderId: "882742229686"
+            };
+            firebase.initializeApp(config);
+          </script>
 
+
+          <script src="contactus.js"></script>
 
   </body>
 </html>
