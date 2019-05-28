@@ -24,8 +24,8 @@ docRef.get().then(function(doc) {
 
 
 function validate(){
-  alert('請於  '+date2+'  14:00看診 您得號碼為12號');
-  return document.location.href = 'index.html';
+  alert('請於  '+date2+'  14:00看診 您的號碼為12號');
+  savedata();
 }
 
 function savedata() {
@@ -36,6 +36,9 @@ function savedata() {
   const allergic = getid('allergic');
   const medbox = getid('lbox');
   const txtbox = getid('subject');
+  console.log(medbox);
+  console.log(allergic);
+  console.log(medic);
 
   saveMessage(identify2, date2, txtName, allergic, phone, medic, medbox, txtbox);
 
