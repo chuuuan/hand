@@ -23,8 +23,10 @@ docRef.get().then(function(doc) {
 });
 
 
+
+
 function validate(){
-  alert('請於  '+date2+'  14:00看診 您得號碼為12號');
+  alert('請於  '+date2+'  14:00看診 您的號碼為12號');
   return document.location.href = 'index.html';
 }
 
