@@ -11,71 +11,49 @@
         resize: vertical;
       }
 
-    button[type=submit] {
-      background-color: #E4D154;
-      color: #606060;
-      padding: 12px 20px;
-      border: none;
-      border-radius: 4px;
-      cursor: pointer;
-      float: right;
-      position: absolute;
-      top: 250px;
-      left: 425px;
-    }
-
     input[type=submit]:hover {
       background-color: #FDE01C;
     }
 
-  
+
 
     .p{
       position: absolute;
       top: -1.6px;
       left: -8.6px;
     }
-
-    .precision{
+    .bl{
       position: absolute;
-      top: -37px;
+      cursor: pointer;
+      top: 120px;
+      left: 150px;
+    }
+
+    .br{
+      position: absolute;
+      cursor: pointer;
+      top: 120px;
       left: 565px;
     }
 
-    /* Clear floats after the columns */
-    .row:after {
-      content: "";
-      display: table;
-      clear: both;
+    .timeinput{
+      position: absolute;
+      top: 285px;
+      left: 230px;
 
     }
+
+
 
     </style>
   </head>
   <body background="images/bkg_healthelf.png">
     <a href="index.html"><img class="p" style="cursor:pointer" src="images/btn_backtohome.png"></a>
 
+        <a href=""><img class="bl" src="images/btn_eyeremind.png" title="按一下開始"></a>
+        <a href=""><img class="br" src="images/btn_eyerelax.png" title="按一下開始"></a>
+        <input type="text" class="timeinput" id="" name="" style="float:center;width:15%;size:16;" placeholder="00:00">
 
-
-          <script src="https://www.gstatic.com/firebasejs/5.9.0/firebase.js"></script>
-          <script src="https://www.gstatic.com/firebasejs/5.9.0/firebase-app.js"></script>
-          <script src="https://www.gstatic.com/firebasejs/5.9.0/firebase-auth.js"></script>
-          <script src="https://www.gstatic.com/firebasejs/5.9.1/firebase-firestore.js"></script>
-          <script>
-            // Initialize Firebase
-            var config = {
-              apiKey: "AIzaSyB3RG9-49l74BOv0FEyLn5sHI6duZlSpwQ",
-              authDomain: "eye-detection-6fd57.firebaseapp.com",
-              databaseURL: "https://eye-detection-6fd57.firebaseio.com",
-              projectId: "eye-detection-6fd57",
-              storageBucket: "eye-detection-6fd57.appspot.com",
-              messagingSenderId: "882742229686"
-            };
-            firebase.initializeApp(config);
-          </script>
-
-
-          <script src="contactus.js"></script>
 
   </body>
 </html>
