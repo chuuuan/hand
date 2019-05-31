@@ -1,38 +1,38 @@
-var db = firebase.firestore();
-var email;
-var eye_temp;
-email = window.sessionStorage.getItem("email");
-console.log(email);
-var docRef = db.collection("model").doc('model');
+function countdownTimeStart() {
 
-docRef.get().then(function(doc) {
-  if (doc.exists) {
-    document.getElementById('percentage').innerHTML = doc.data().rate + '%';
+  // var timer = document.getElementById("time").vlaue;
+  // console.log(timer);
 
-  } else {
-    // doc.data() will be undefined in this case
-    console.log("No such document!");
-  }
-}).catch(function(error) {
-  console.log("Error getting document:", error);
-});
+  var countDownDate = new Date().getTime() + 6000;
+  console.log(countDownDate);
 
+  // Update the count down every 1 second
+  var x = setInterval(function() {
 
+    // Get todays date and time
+    var now = new Date().getTime();
+    console.log(now);
 
+    // Find the distance between now an the count down date
+    var distance = countDownDate - now;
+    var distance2=Math.round(distance);
+    console.log(distance);
+    console.log(distance2);
 
-var docRef1 = db.collection("User").doc(email);
+    // Time calculations for days, hours, minutes and seconds
+    var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-docRef1.get().then(function(doc1) {
-  eye_temp = doc1.data().eye_temp;
-  get_eyesight(eye_temp, email);
+    // Output the result in an element with id="demo"
+    document.getElementById("demo").innerHTML = hours + "h " +
+      minutes + "m " + seconds + "s ";
 
-}).catch(function(error) {
-  console.log("Error getting document:", error);
-});
-
-function get_eyesight(eye_temp, email) {
-  db.collection("User").doc(email).collection("eyesight").doc(eye_temp).get().then(function(doc) {
-    document.getElementById("test_left").value = doc.data().eye_left_real;
-    document.getElementById("test_right").value = doc.data().eye_right_real;
-  });
+    // If the count down is over, write some text
+    if (distance < 0) {
+      clearInterval(x);
+      Alert.render();
+      document.getElementById("demo").innerHTML = "";
+    }
+  }, 1000);
 }
